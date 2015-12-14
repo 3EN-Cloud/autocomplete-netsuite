@@ -1,17 +1,19 @@
 {
   "name": "autocomplete-netsuite",
-  "main": "./lib/autocomplete-netsuite",
+  "main": "./lib/main",
   "version": "0.0.0",
-  "description": "A short description of your package",
-  "keywords": [
-  ],
-  "activationCommands": {
-    "atom-workspace": "autocomplete-netsuite:toggle"
-  },
+  "description": "An autocomplete package for the netsuite suitescript api",
   "repository": "https://github.com/atom/autocomplete-netsuite",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
+  },
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "provide"
+      }
+    }
   },
   "dependencies": {
   }
