@@ -1,0 +1,10 @@
+{
+  "functions":[
+    {
+      "snippet" : "nlapiAddDays(${1:d}, ${2:days})",
+      "type" : "function",
+      "leftLabel" : "Date",
+      "description": "Adds/subtracts a number of days to or from a date object"
+    }
+  ]
+}
