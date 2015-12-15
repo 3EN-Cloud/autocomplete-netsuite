@@ -1,10 +1,709 @@
 {
-  "functions":[
-    {
-      "snippet" : "nlapiAddDays(${1:d}, ${2:days})",
-      "type" : "function",
-      "leftLabel" : "Date",
-      "description": "Adds/subtracts a number of days to or from a date object"
-    }
-  ]
+  "functions": [{
+    "type": "function",
+    "snippet": "nlapiAddDays(${1:d},${2:days})",
+    "leftLabel": "Date",
+    "description": "Adds/subtracts a number of days to or from a date object"
+  }, {
+    "type": "function",
+    "snippet": "nlapiAddMonths(${1:d},${2:months})",
+    "leftLabel": "Date",
+    "description": "Adds/subtracts a number of months to or from a date object"
+  }, {
+    "type": "function",
+    "snippet": "nlapiAttachRecord(${1:type},${2:id},${3:type2},${4:id2},${5:attributes})",
+    "leftLabel": "Void",
+    "description": "Attaches a single record to another record. The following attachment relationships are supported:"
+  }, {
+    "type": "function",
+    "snippet": "nlapiCancelLineItem(${1:type})",
+    "leftLabel": "Void",
+    "description": "Cancels any uncommited changes to the current line of a sublist"
+  }, {
+    "type": "function",
+    "snippet": "nlapiCommitLineItem(${1:type})",
+    "leftLabel": "Void",
+    "description": "Saves/commits the changes to the current line in a sublist. This is the equivalent of clicking \u003cstrong\u003eDone\u003c/strong\u003e for a line item in the UI."
+  }, {
+    "type": "function",
+    "snippet": "nlapiCopyRecord(${1:type},${2:id},${3:initializeValues})",
+    "leftLabel": "nlobjRecord",
+    "description": "Initializes a new record using field data from an existing record. Note that this API simply creates a new instance of another record. After making changes to the copy, you must submit the copy (which is considered as a new record) to the database for your changes to be committed to NetSuite."
+  }, {
+    "type": "function",
+    "snippet": "nlapiCreateAssistant(${1:title},${2:hideHeader})",
+    "leftLabel": "nlobjAssistant",
+    "description": "Use this function to return a reference to an nlobjAssistant object, which is the basis for building your own custom assistant. This API is supported in Suitelets."
+  }, {
+    "type": "function",
+    "snippet": "nlapiCreateCSVImport()",
+    "leftLabel": "nlobjCSVImport",
+    "description": "Initializes a new record and returns an nlobjCSVImport object. You can then use the methods available on the returned record object to populate the object with the desired information. Next, you can pass this object to nlapiSubmitCSVImport(nlobjCSVImport), which asynchronously imports the data from the returned object into NetSuite."
+  }, {
+    "type": "function",
+    "snippet": "nlapiCreateCurrentLineItemSubrecord(${1:sublist},${2:fldname})",
+    "leftLabel": "nlobjSubrecord",
+    "description": "Returns a nlobjSubrecord object. Use this API to create a subrecord from a \u003cstrong\u003esublist\u003c/strong\u003e field on the parent record."
+  }, {
+    "type": "function",
+    "snippet": "nlapiCreateEmailMerger(${1:templateId})",
+    "leftLabel": "nlobjEmailMerger",
+    "description": "With scriptable email templates, you can create dynamic templates for email marketing campaigns and system email. See Scriptable Templates for additional information."
+  }, {
+    "type": "function",
+    "snippet": "nlapiCreateError(${1:code},${2:details},${3:suppressNotification})",
+    "leftLabel": "nlobjError",
+    "description": "Creates an nlobjError (complete with stacktrace) that can be thrown to abort script execution. This API is supported in user event, scheduled, portlet, and Suitelet scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiCreateFile(${1:name},${2:type},${3:contents})",
+    "leftLabel": "nlobjFile",
+    "description": "Instantiates and returns an nlobjFile object. The file object can be used as an email or fax attachement. The file object can also be saved to the file cabinet using nlapiSubmitFile(file)."
+  }, {
+    "type": "function",
+    "snippet": "nlapiCreateForm(${1:title},${2:hideNavbar})",
+    "leftLabel": "nlobjForm",
+    "description": "Creates an nlobjForm object which can be used to generate an entry form page. This API is available to Suitelets only."
+  }, {
+    "type": "function",
+    "snippet": "nlapiCreateList(${1:title},${2:hideNavbar})",
+    "leftLabel": "nlobjList",
+    "description": "Creates an nlobjList object used to generate an internal standalone list. This API is available to \u003cstrong\u003eSuitelets only\u003c/strong\u003e."
+  }, {
+    "type": "function",
+    "snippet": "nlapiCreateRecord(${1:type},${2:initializeValues})",
+    "leftLabel": "nlobjRecord",
+    "description": "Initializes a new record and returns an nlobjRecord object containing all the default field data for that record type. You can then use the methods available on the returned record object to populate the record with the desired information."
+  }, {
+    "type": "function",
+    "snippet": "nlapiCreateReportDefinition()",
+    "leftLabel": "nlobjReportDefinition",
+    "description": "Creates an instance of a report definition object. The report is built on this object using subsequent methods. The report definition can be used to create a form for rendering the pivot table report in a browser, or the pivot table APIs can be used to extract the values of the individual rows and columns of the pivot table."
+  }, {
+    "type": "function",
+    "snippet": "nlapiCreateReportForm(${1:title})",
+    "leftLabel": "nlobjReportForm",
+    "description": "Creates an nlobjReportForm object to render the report definition."
+  }, {
+    "type": "function",
+    "snippet": "nlapiCreateSearch(${1:type},${2:filters},${3:columns})",
+    "leftLabel": "nlobjSearch",
+    "description": "Creates a new search. The search can be modified and run as an ad-hoc search, without saving it. Alternatively, calling nlobjSearch.saveSearch(title, scriptId) will save the search to the database, so it can be resused later in the UI or using nlapiLoadSearch(type, id)."
+  }, {
+    "type": "function",
+    "snippet": "nlapiCreateSubrecord(${1:fldname})",
+    "leftLabel": "nlobjSubrecord",
+    "description": "Returns a nlobjSubrecord object. Use this API to create a subrecord from a \u003cstrong\u003ebody\u003c/strong\u003e field on the parent record."
+  }, {
+    "type": "function",
+    "snippet": "nlapiCreateTemplateRenderer()",
+    "leftLabel": "nlobjTemplateRenderer",
+    "description": "Use this function to produce HTML and PDF printed forms that utilize advanced PDF/HTML template capabilities. This API returns an nlobjTemplateRenderer object. This object includes methods that pass in a template as string to be interpreted by FreeMarker, and render interpreted content in your choice of two different formats: as HTML output to an nlobjResponse object, or as XML string that can be passed to nlapiXMLToPDF(xmlstring) to produce a PDF."
+  }, {
+    "type": "function",
+    "snippet": "nlapiDateToString(${1:d},${2:format})",
+    "leftLabel": "String",
+    "description": "Converts a date object to a string, formats the string based on the format argument passed in, and then returns the formatted string."
+  }, {
+    "type": "function",
+    "snippet": "nlapiDeleteFile(${1:id})",
+    "leftLabel": "Number",
+    "description": "Deletes a file and returns the internal ID of the file that was deleted. Usage metering allowed for this function is 20 units. This API is supported in user event, scheduled, portlet, and Suitelet scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiDeleteRecord(${1:type},${2:id})",
+    "leftLabel": "Void",
+    "description": "Use this API to delete an existing record. This API is supported in all script types. See API Governance for the unit cost associated with this API."
+  }, {
+    "type": "function",
+    "snippet": "nlapiDetachRecord(${1:type},${2:id},${3:type2},${4:id2},${5:attributes})",
+    "leftLabel": "Void",
+    "description": "Use this API to detach a single record from another record. The following detach relationships are supported:"
+  }, {
+    "type": "function",
+    "snippet": "nlapiDisableField(${1:fldnam},${2:val})",
+    "leftLabel": "Void",
+    "description": "Sets the given field to disabled or enabled based on the value (true or false). This API is supported in client scripts only."
+  }, {
+    "type": "function",
+    "snippet": "nlapiDisableLineItemField(${1:type},${2:fldnam},${3:val})",
+    "leftLabel": "Void",
+    "description": "Sets the given line item field of a sublist to disabled or enabled based on the value (true or false). This function is only supported in client scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiEditCurrentLineItemSubrecord(${1:sublist},${2:fldname})",
+    "leftLabel": "nlobjSubrecord",
+    "description": "Returns a nlobjSubrecord object. Use this API to edit a subrecord from a \u003cstrong\u003esublist\u003c/strong\u003e field on the parent record."
+  }, {
+    "type": "function",
+    "snippet": "nlapiEditSubrecord(${1:fldname})",
+    "leftLabel": "nlobjSubrecord",
+    "description": "Returns a nlobjSubrecord object. Use this API to edit a subrecord from a \u003cstrong\u003ebody\u003c/strong\u003e field on the parent record."
+  }, {
+    "type": "function",
+    "snippet": "nlapiEncrypt(${1:s},${2:algorithm},${3:key})",
+    "leftLabel": "String",
+    "description": "Encrypts a clear text String using a SHA-1 hash function."
+  }, {
+    "type": "function",
+    "snippet": "nlapiEscapeXML(${1:text})",
+    "leftLabel": "String",
+    "description": "Prepares a String for use in XML by escaping XML markup (for example, angle brackets, quotation marks, and ampersands)"
+  }, {
+    "type": "function",
+    "snippet": "nlapiExchangeRate(${1:sourceCurrency},${2:targetCurrency},${3:effectiveDate})",
+    "description": "Use this API to get the exchange rate between two currencies based on a certain date. The exchange rate values you are getting are those that appear in the Exchange Rate column of the Currency Exchange Rates record (see figure)."
+  }, {
+    "type": "function",
+    "snippet": "nlapiFindLineItemMatrixValue(${1:type},${2:fldnam},${3:val},${4:column})",
+    "leftLabel": "Number",
+    "description": "This API returns the line number of a particular price in a given column. If the value is present on multiple lines, it will return the line item of the first line that contains the value. This API is supported in client and user event scripts. Use this API on a matrix sublists only."
+  }, {
+    "type": "function",
+    "snippet": "nlapiFindLineItemValue(${1:type},${2:fldnam},${3:val})",
+    "leftLabel": "Number",
+    "description": "Use this API to find the line number of a specific field in a sublist. This API can be used on any sublists that supports SuiteScript. This API is supported in client and user event scripts only."
+  }, {
+    "type": "function",
+    "snippet": "nlapiFormatCurrency(${1:str})",
+    "leftLabel": "String",
+    "description": "Formats a String into a currency field value"
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetContext()",
+    "leftLabel": "nlobjContext",
+    "description": "Used to branch scripts depending on the metadata or context of the execution. For example, you may want the script to perform in one way when a form is accessed via the UI and another when the form is accessed via web services."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetCurrentLineItemDateTimeValue(${1:type},${2:fieldId},${3:timeZone})",
+    "leftLabel": "String",
+    "description": "This API returns the value of a datetime field on the currently selected line of a sublist. If timeZone is passed in, the datetime value is converted to that time zone and then returned. If timeZone is not passed in, the datetime value is returned in the default time zone."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetCurrentLineItemIndex(${1:type})",
+    "leftLabel": "Number",
+    "description": "Returns the line number of the currently selected line in a group."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetCurrentLineItemMatrixValue(${1:type},${2:fldnam},${3:column})",
+    "leftLabel": "String",
+    "description": "Use this API to get the value of the currently selected matrix field. This API should be used on matrix sublists only. This API is supported in client and user event scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetCurrentLineItemText(${1:type},${2:fldnam})",
+    "leftLabel": "String",
+    "description": "Returns the display name (the UI label) of a select field (based on its current selection) on the \u003cstrong\u003ecurrently\u003c/strong\u003e selected line. Typically used in validate line functions."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetCurrentLineItemValue(${1:type},${2:fldnam})",
+    "leftLabel": "String",
+    "description": "Returns the value of a sublist field on the currently selected line"
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetCurrentLineItemValues(${1:type},${2:fldnam})",
+    "leftLabel": "array",
+    "description": "Returns the values of a multiselect sublist field on the currently selected line. One example of a multiselect sublist field is the Serial Numbers field on the Items sublist."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetDateTimeValue(${1:fieldId},${2:timeZone})",
+    "leftLabel": "String",
+    "description": "This API returns the value of a datetime field. If timeZone is passed in, the datetime value is converted to that time zone and then returned. If timeZone is not passed in, the datetime value is returned in the default time zone."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetDepartment()",
+    "leftLabel": "Number",
+    "description": "This API is supported in client, user event, scheduled, portlet, and Suitelet scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetField(${1:fldnam})",
+    "leftLabel": "nlobjField",
+    "description": "Use this function to obtain \u003cstrong\u003ebody\u003c/strong\u003e field metadata. Calling this function instantiates the nlobjField object, which then allows you to use the methods available to nlobjField to get field metadata."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetFieldText(${1:fldnam})",
+    "leftLabel": "String",
+    "description": "Use this API to get the text value (rather than the internal ID value) of a field. This API is available in client and user event scripts only."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetFieldTexts(${1:fldnam})",
+    "leftLabel": "Array",
+    "description": "Returns the display names for a multiselect field corresponding to the current selection. This API is available in client and user event scripts only."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetFieldValue(${1:fldnam})",
+    "leftLabel": "String",
+    "description": "Use this function to get the internal ID of a field. For example, if the customer Abe Simpson appears in a field, this function will return 87, which represents the internal ID value of the Abe Simpson customer record. Note that if you are getting the value of an inline checkbox, the return value will be \u003cstrong\u003eF\u003c/strong\u003e if the field is unset."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetFieldValues(${1:fldnam})",
+    "leftLabel": "Array",
+    "description": "Use this function to get an array of internal ID values for a multiselect field."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetJobManager(${1:jobType})",
+    "leftLabel": "nlobjJobManager",
+    "description": "Returns a job manager instance (nlobjJobManager). You then use the methods on nlobjJobManager to create and submit your merge duplicate records request. This API is supported in script types that run on the server. You cannot use this function in a client script."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetLineItemCount(${1:type})",
+    "leftLabel": "Number",
+    "description": "Use this API to determine the number of line items on a sublist. You can then use APIs such as nlapiInsertLineItem or nlapiRemoveLineItem to add or remove lines before/after existing lines."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetLineItemDateTimeValue(${1:type},${2:fieldId},${3:lineNum},${4:timeZone})",
+    "leftLabel": "String",
+    "description": "This API returns the value of a datetime field on a sublist. If timeZone is passed in, the datetime value is converted to that time zone and then returned. If timeZone is not passed in, the datetime value is returned in the default time zone."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetLineItemField(${1:type},${2:fldnamm},${3:linenum})",
+    "leftLabel": "nlobjField",
+    "description": "Use this function to obtain \u003cstrong\u003esublist\u003c/strong\u003e (line item) field metadata. Calling this function instantiates the nlobjField object, which then allows you to use all the methods available to nlobjField to get field metadata."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetLineItemMatrixField(${1:type},${2:fldnam},${3:linenum},${4:column})",
+    "leftLabel": "nlobjField",
+    "description": "Use this API to obtain metadata for a field that appears in a matrix sublist. This API is supported in client and user event scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetLineItemMatrixValue(${1:type},${2:fldnam},${3:linenum},${4:column})",
+    "leftLabel": "String",
+    "description": "Use this API to get the value of a matrix field that appears on a specific line in a specific column. This API can be used only in the context of a matrix sublist. This API is supported in client and user event scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetLineItemText(${1:type},${2:fldnam},${3:linenum})",
+    "leftLabel": "String",
+    "description": "Returns the display name of a select field (based on its current selection) in a sublist."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetLineItemValue(${1:type},${2:fldnam},${3:linenum})",
+    "leftLabel": "String",
+    "description": "Available only in client and user event SuiteScripts. Note that you cannot set default line item values when the line is not in edit mode."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetLineItemValues(${1:type},${2:fldname},${3:linenum})",
+    "leftLabel": "array",
+    "description": "Returns the values of a multiselect sublist field on a selected line. One example of a multiselect sublist field is the Serial Numbers field on the Items sublist."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetLocation()",
+    "leftLabel": "Number",
+    "description": "Returns the integer value of the current user\u0027s location. This API is supported in client, user event, scheduled, portlet, and Suitelet scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetLogin()",
+    "leftLabel": "nlobjLogin",
+    "description": "Returns the NetSuite login credentials of currently logged-in user."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetMatrixCount(${1:type},${2:fldnam})",
+    "leftLabel": "Number",
+    "description": "Use this API in a matrix sublist to get the number of columns for a specific matrix field. This API is supported in client and user event scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetMatrixField(${1:type},${2:fldnam},${3:column})",
+    "leftLabel": "nlobjField",
+    "description": "Use this API to get field metadata for a matrix �header� field in a matrix sublist."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetMatrixValue(${1:type},${2:fldnam},${3:column})",
+    "leftLabel": "Number",
+    "description": "Use this API to get the value of a matrix �header� field in a matrix sublist."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetNewRecord()",
+    "leftLabel": "nlobjRecord",
+    "description": "Available in beforeLoad, beforeSubmit, and afterSubmit user event scripts. You are not allowed to submit the current or previous record returned by nlapiGetNewRecord."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetOldRecord()",
+    "leftLabel": "nlobjRecord",
+    "description": "Available in beforeLoad, beforeSubmit, and afterSubmit user event scripts. You are not allowed to submit the current or previous record returned by nlapiGetOldRecord."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetRecordId()",
+    "leftLabel": "Number",
+    "description": "Use this API to retrieve the internalId of the current record in a user event script. This API is available in client and user event scripts only."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetRecordType()",
+    "leftLabel": "String",
+    "description": "Use this API to retrieve the record type internal ID of the current record in a user event script or a client script. If there is no current record type, the value of null will be returned."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetRole()",
+    "leftLabel": "Number",
+    "description": "Returns the internalId for the current user\u0027s role. This API is supported in client, user event, scheduled, portlet, and Suitelet scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetSubsidiary()",
+    "leftLabel": "Number",
+    "description": "Returns the internalId for the current user\u0027s subsidiary. This API is supported in client, user event, scheduled, portlet, and Suitelet scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiGetUser()",
+    "description": "Returns the internalId of the current NetSuite user. This API is supported in client, user event, scheduled, portlet, and Suitelet scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiInitiateWorkflow(${1:recordtype},${2:id},${3:workflowid})",
+    "leftLabel": "Number",
+    "description": "Use this function to initiate a workflow on-demand. This function is the programmatic equivalent of the Initiate Workflow action in the SuiteFlow Manager. The function returns the workflow instance ID for the workflow-record combination. A user error is thrown if the record in the workflow is invalid or not supported for that workflow."
+  }, {
+    "type": "function",
+    "snippet": "nlapiInitiateWorkflowAsync(${1:recordType},${2:id},${3:workflowId},${4:initialValues})",
+    "leftLabel": "String",
+    "description": "Use this function to asynchronously initiate a workflow. When you call nlapiInitiateWorkflowAsync, a job is created to initiate an instance of the specified workflow. The job is placed in the scheduling queue, and the workflow instance is initiated once the job reaches the top of the queue."
+  }, {
+    "type": "function",
+    "snippet": "nlapiInsertLineItem(${1:type},${2:line})",
+    "leftLabel": "Void",
+    "description": "Inserts a line above the currently selected line in a sublist. Available to client and user event scripts only."
+  }, {
+    "type": "function",
+    "snippet": "nlapiInsertLineItemOption(${1:type},${2:fldnam},${3:value},${4:text},${5:selected})",
+    "leftLabel": "Void",
+    "description": "Adds a select option to a select/multiselect field that was added through scripting. This field will appear as a line item on a sublist."
+  }, {
+    "type": "function",
+    "snippet": "nlapiInsertSelectOption(${1:fldnam},${2:value},${3:text},${4:selected})",
+    "leftLabel": "Void",
+    "description": "Adds a select option to a select/multiselect field added via script. Note that this API can only be used on select/multiselect fields that are added via the UI Objects API (for example, in Suitelets or beforeLoad user events scripts)."
+  }, {
+    "type": "function",
+    "snippet": "nlapiIsLineItemChanged(${1:type})",
+    "leftLabel": "Boolean",
+    "description": "Determines whether any changes have been made to a sublist"
+  }, {
+    "type": "function",
+    "snippet": "nlapiIsLockedForDupeMerge(${1:type},${2:id})",
+    "leftLabel": "Boolean",
+    "description": "Verifies whether a specified record is locked for duplicate resolution. This API is supported in all script types."
+  }, {
+    "type": "function",
+    "snippet": "nlapiLoadConfiguration(${1:type})",
+    "leftLabel": "nlobjConfiguration",
+    "description": "Use this API to load a NetSuite configuration page. The following configuration pages support SuiteScript: Company Information, General Preferences, User Preferences, Accounting Preferences, Accounting Periods, Tax Periods."
+  }, {
+    "type": "function",
+    "snippet": "nlapiLoadFile(${1:id})",
+    "leftLabel": "nlobjFile",
+    "description": "Loads a file from the NetSuite file cabinet (using the file\u0027s internal ID or path). Returns an nlobjFile object that encapsulates the file\u0027s metadata (name and type) and contents in the form of a String (base-64 encoded if the file\u0027s type is binary). The script context must have privileges to the file (based on folder permissions), and the file cannot be a hidden (bundled) file."
+  }, {
+    "type": "function",
+    "snippet": "nlapiLoadRecord(${1:type},${2:id},${3:initializeValues})",
+    "leftLabel": "nlobjRecord",
+    "description": "Loads an existing record from the system and returns an nlobjRecord object containing all the field data for that record. You can then extract the desired information from the loaded record using the methods available on the returned record object. This API is a core API. It is available in both client and server contexts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiLoadSearch(${1:type},${2:id})",
+    "leftLabel": "nlobjSearch",
+    "description": "Loads an existing saved search. The saved search could have been created using the UI, or created using nlapiCreateSearch(type, filters, columns) in conjunction with nlobjSearch.saveSearch(title, scriptId)."
+  }, {
+    "type": "function",
+    "snippet": "nlapiLogExecution(${1:type},${2:title},${3:details})",
+    "leftLabel": "Void",
+    "description": "This API is supported in all server-side and record-level (global) client scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiLookupField(${1:type},${2:id},${3:fields},${4:text})",
+    "leftLabel": "String",
+    "description": "Performs a search for one or more body fields on a record. This function supports joined-field lookups. Note that the notation for joined fields is: join_id.field_name"
+  }, {
+    "type": "function",
+    "snippet": "nlapiMergeRecord(${1:id},${2:baseType},${3:baseId},${4:altType},${5:altId},${6:fields})",
+    "description": "\u003cstrong\u003eTHIS API HAS BEEN DEPRECATED\u003c/strong\u003e"
+  }, {
+    "type": "function",
+    "snippet": "nlapiMergeTemplate(${1:id},${2:baseType},${3:baseId},${4:altType},${5:altId},${6:fields})",
+    "description": "\u003cstrong\u003eTHIS API HAS BEEN DEPRECATED\u003c/strong\u003e"
+  }, {
+    "type": "function",
+    "snippet": "nlapiOutboundSSO(${1:id})",
+    "leftLabel": "String",
+    "description": "Use this API to generate a new OAuth token for a user. Currently this API can be called from portlet scripts, user event scripts, and Suitelets \u003cstrong\u003eonly\u003c/strong\u003e. This API consumes 20 usage units per call."
+  }, {
+    "type": "function",
+    "snippet": "nlapiPrintRecord(${1:type},${2:id},${3:mode},${4:properties})",
+    "leftLabel": "nlobjFile",
+    "description": "Returns an nlobjFile object containing the PDF or HTML document. This API is supported in user event, scheduled, and Suitelet scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiRefreshLineItems(${1:type})",
+    "leftLabel": "Void",
+    "description": "Makes a server call in order to refresh staticlist (read-only) sublists. For inlineeditor or editor sublists, it simply redraws the sublist. This API does not do anything for sublists of type list."
+  }, {
+    "type": "function",
+    "snippet": "nlapiRefreshPortlet()",
+    "leftLabel": "Void",
+    "description": "Causes a FORM type nlobjPortlet to immediately reload."
+  }, {
+    "type": "function",
+    "snippet": "nlapiRemoveCurrentLineItemSubrecord(${1:sublist},${2:fldname})",
+    "leftLabel": "Void",
+    "description": "Returns a nlobjSubrecord object. Use this API to remove a subrecord from a \u003cstrong\u003esublist\u003c/strong\u003e field on the parent record."
+  }, {
+    "type": "function",
+    "snippet": "nlapiRemoveLineItem(${1:type},${2:line})",
+    "leftLabel": "Void",
+    "description": "Removes the currently selected line in a sublist. Supported in client scripts, user event scripts, and Suitelets."
+  }, {
+    "type": "function",
+    "snippet": "nlapiRemoveLineItemOption(${1:type},${2:fldnam},${3:value})",
+    "leftLabel": "Void",
+    "description": "Removes a single select option from a select or multiselect line item field added through a script"
+  }, {
+    "type": "function",
+    "snippet": "nlapiRemoveSelectOption(${1:fldnam},${2:value})",
+    "leftLabel": "Void",
+    "description": "Removes a single select option from a select or multiselect field added via script. Note that this API call can only be used on select/multiselect fields that are added via the UI Objects API (for example on Suitelets or beforeLoad user event scripts)."
+  }, {
+    "type": "function",
+    "snippet": "nlapiRemoveSubrecord(${1:fldname})",
+    "leftLabel": "Void",
+    "description": "Returns a nlobjSubrecord object. Use this API to remove a subrecord from a \u003cstrong\u003ebody\u003c/strong\u003e field on the parent record."
+  }, {
+    "type": "function",
+    "snippet": "nlapiRequestURL(${1:url},${2:postdata},${3:headers},${4:callback},${5:httpMethod})",
+    "leftLabel": "nlobjResponse",
+    "description": "\u003cp\u003eImportant: There are two �versions� of this API: a client-side version and a server-side version. When you execute this API in a server call, there is no \u003cstrong\u003ecallback\u003c/strong\u003e parameter. Therefore, the function signature in a server-side call is nlapiRequestURL(url, postdata, headers, httpMethod). When you execute this API in a client script, the function signature is nlapiRequestURL(url, postdata, headers, callback, httpMethod)."
+  }, {
+    "type": "function",
+    "snippet": "nlapiRequestURLWithCredentials(${1:credentials},${2:url},${3:postdata},${4:headers},${5:httpMethod})",
+    "leftLabel": "nlobjResponse",
+    "description": "Allows you to send credentials outside of NetSuite. This API securely accesses a handle to credentials that users specify in a NetSuite credential field."
+  }, {
+    "type": "function",
+    "snippet": "nlapiResizePortlet()",
+    "leftLabel": "Void",
+    "description": "Causes a custom form portlet (nlobjPortlet) to be resized."
+  }, {
+    "type": "function",
+    "snippet": "nlapiResolveURL(${1:type},${2:identifier},${3:id},${4:displayMode})",
+    "leftLabel": "String",
+    "description": "Creates a URL on-the-fly by passing URL parameters from within your SuiteScript. For example, when creating a SuiteScript Portlet script, you may want to create and display the record URLs for each record returned in a search."
+  }, {
+    "type": "function",
+    "snippet": "nlapiScheduleScript(${1:scriptId},${2:deployId},${3:params})",
+    "leftLabel": "String",
+    "description": "A call to this API places a scheduled script into the NetSuite scheduling queue. For this to work, the scheduled script must have a status of \u003cstrong\u003eNot Scheduled\u003c/strong\u003e on the Script Deployment page. If the script\u0027s status is set to \u003cstrong\u003eTesting\u003c/strong\u003e on the Script Deployment page, the API will not place the script into the scheduling queue."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSearchDuplicate(${1:type},${2:fields},${3:id})",
+    "leftLabel": "nlobjSearchResult[]",
+    "description": "Performs a search for duplicate records based on the account\u0027s Duplicate Detection configuration. Note that this API only works for records that support duplicate record detection. These records include customers, leads, prospects, contacts, partners, and vendors."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSearchGlobal(${1:keywords})",
+    "leftLabel": "nlobjSearchResult[]",
+    "description": "Performs a global search against a single keyword or multiple keywords. This API is supported in client, user event, scheduled, portlet, and Suitelet scripts. Usage metering allowed for nlapiSearchGlobal is 10 units."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSearchRecord(${1:type},${2:id},${3:filters},${4:columns})",
+    "leftLabel": "nlobjSearchResult[]",
+    "description": "Performs a search using a set of criteria (your search filters) and columns (the results). Alternatively, you can use this API to execute an existing saved search. Results are limited to 1000 rows. Also note that in search/lookup operations, long text fields are truncated at 4,000 characters. Usage metering allowed for nlapiSearchRecord is 10 units."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSelectLineItem(${1:type},${2:linenum})",
+    "leftLabel": "Void",
+    "description": "Selects an existing line in a sublist"
+  }, {
+    "type": "function",
+    "snippet": "nlapiSelectNewLineItem(${1:type})",
+    "leftLabel": "Void",
+    "description": "Use this function if you want to set a value on a sublist line that does not currently exist. This API is the UI equivalent of clicking a sublist tab (for example the Items sublist tab) so that you can then add a new line (or item, in this example) to the sublist."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSelectNode(${1:node},${2:xpath})",
+    "leftLabel": "Node",
+    "description": "Selects a node from an XML document using an XPath expression"
+  }, {
+    "type": "function",
+    "snippet": "nlapiSelectNodes(${1:node},${2:xpath})",
+    "leftLabel": "Array",
+    "description": "Selects an array of nodes from an XML document using an XPath expression"
+  }, {
+    "type": "function",
+    "snippet": "nlapiSelectValue(${1:node},${2:xpath})",
+    "leftLabel": "String",
+    "description": "Selects a value from an XML document using an XPath expression"
+  }, {
+    "type": "function",
+    "snippet": "nlapiSelectValues(${1:node},${2:path})",
+    "leftLabel": "Array",
+    "description": "Selects an array of values from an XML document using an XPath expression"
+  }, {
+    "type": "function",
+    "snippet": "nlapiSendCampaignEmail(${1:campaigneventid},${2:recipientid})",
+    "leftLabel": "Number",
+    "description": "Use this function to send a single �on-demand� campaign email to a specified recipient and return a campaign response ID to track the email. Note that this function works in conjunction with the Lead Nurturing (campaigndrip) sublist only; it does not work with the E-mail (campaignemail) sublist."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSendEmail(${1:author},${2:recipient},${3:subject},${4:body},${5:cc},${6:bcc},${7:records},${8:attachments},${9:notifySenderOnBounce},${10:internalOnly},${11:replyTo})",
+    "leftLabel": "Void",
+    "description": "nlapiSendEmail sends and records outgoing email to an individual or to a group of individuals. You can use nlapiSendEmail in the following ways:"
+  }, {
+    "type": "function",
+    "snippet": "nlapiSendFax(${1:author},${2:recipient},${3:subject},${4:body},${5:records},${6:attachments})",
+    "leftLabel": "Void",
+    "description": "Sends and records an outgoing fax using the fax settings already defined in the user\u0027s account. This API is supported in client, user event, scheduled, portlet, and Suitelet scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetCurrentLineItemDateTimeValue(${1:type},${2:fieldId},${3:dateTime},${4:timeZone})",
+    "leftLabel": "Void",
+    "description": "This API sets the value of a datetime field on the currently selected line of a sublist. If timeZone is passed in, the datetime value is converted to that time zone and then set. If timeZone is not passed in, the datetime value is set in the default time zone."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetCurrentLineItemMatrixValue(${1:type},${2:fldnam},${3:column},${4:value},${5:firefieldchanged},${6:synchronous})",
+    "leftLabel": "Void",
+    "description": "This API is typically used in validate line functions to set the value of a given matrix sublist field before it has been added to the form. This API is supported in client and user event scripts. Also note that it should be used on matrix sublists only."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetCurrentLineItemText(${1:type},${2:fldnam},${3:text},${4:firefieldchanged},${5:synchronous})",
+    "leftLabel": "Void",
+    "description": "Sets the value of a select field on the currently selected line using the display name. See also, Using the Fire Field Changed Parameter."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetCurrentLineItemValue(${1:type},${2:fldnam},${3:value},${4:firefieldchanged},${5:synchronous})",
+    "leftLabel": "Void",
+    "description": "Sets the value of the given line-item field before it has been added to the form. Typically used in validate line functions. See also, Using the Fire Field Changed Parameter."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetCurrentLineItemValues(${1:type},${2:fldnam},${3:values},${4:firefieldchanged},${5:synchronous})",
+    "leftLabel": "Void",
+    "description": "Sets the values for a multi-select sublist field. Note that like any other �set field� APIs, the values you use will be internal ID values. For example, rather than specifying \u0027Abe Simpson\u0027 as a customer value, you will use 232 or 88 or whatever the internal ID is for customer Abe Simpson."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetDateTimeValue(${1:fieldId},${2:dateTime},${3:timeZone})",
+    "leftLabel": "Void",
+    "description": "This API sets the value of a datetime field. If timeZone is passed in, the datetime value is converted to that time zone and then set. If timeZone is not passed in, the datetime value is set in the default time zone."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetFieldDisplay(${1:fldnam},${2:showField})",
+    "leftLabel": "Void",
+    "description": "@param {String} fldnam [required] � The internal ID of the field being hidden or displayed"
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetFieldText(${1:fldname},${2:txt},${3:firefieldchanged},${4:synchronous})",
+    "leftLabel": "Void",
+    "description": "Sets the value of a select field on the current record using the UI display name. This API can be used in user event \u003cstrong\u003ebeforeLoad\u003c/strong\u003e scripts to initialize a field on new records or to initialize a non-stored field. (Non-stored fields are those that have the \u003cstrong\u003eStore Value\u003c/strong\u003e preference unchecked on the custom field page.)"
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetFieldTexts(${1:fldname},${2:txts},${3:firefieldchanged},${4:synchronous})",
+    "leftLabel": "Void",
+    "description": "Sets the values of a multi-select field on the current record using the UI display names. This function is available in client and user event scripts only."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetFieldValue(${1:fldnam},${2:value},${3:firefieldchanged},${4:synchronous})",
+    "leftLabel": "Void",
+    "description": "Sets the value of a given body field. This API can be used in user event \u003cstrong\u003ebeforeLoad\u003c/strong\u003e scripts to initialize a field on new records or to initialize a non-stored field. (Non-stored fields are those that have the \u003cstrong\u003eStore Value\u003c/strong\u003e preference unchecked on the custom field page.)"
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetFieldValues(${1:fldnam},${2:value},${3:firefieldchanged},${4:synchronous})",
+    "leftLabel": "Void",
+    "description": "Sets the value of a multiselect body field on a current record. This API can be used for user event \u003cstrong\u003ebeforeLoad\u003c/strong\u003e scripts to initialize fields on new records or non-stored fields. (Non-stored fields are those that have the \u003cstrong\u003eStore Value\u003c/strong\u003e preference unchecked on the custom field page."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetLineItemDateTimeValue(${1:type},${2:fieldId},${3:lineNum},${4:dateTime},${5:timeZone})",
+    "leftLabel": "Void",
+    "description": "This API sets the value of a datetime field on a sublist. If timeZone is passed in, the datetime value is converted to that time zone and then set. If timeZone is not passed in, the datetime value is set in the default time zone."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetLineItemValue(${1:type},${2:fldnam},${3:linenum},${4:value})",
+    "leftLabel": "Void",
+    "description": "Sets the value of a sublist field on the current, \u003cstrong\u003enew\u003c/strong\u003e record. This API can be used in beforeLoad user event scripts to initialize sublist line items, but only on \u003cstrong\u003enew\u003c/strong\u003e records and only on non-stored sublist fields. If you execute this API on an existing record, nothing will happen."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetMatrixValue(${1:type},${2:fldnam},${3:column},${4:value},${5:firefieldchanged},${6:synchronous})",
+    "leftLabel": "Void",
+    "description": "This API is used to set a header field in a matrix sublist. This API is supported in client and user event scripts. It is typically used in pageInit (client) and beforeLoad (user event) events. Also note that this API should be used on matrix sublists only."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetRecoveryPoint()",
+    "description": "Creates a recovery point saving the state of the script\u0027s execution. When NetSuite resumes the execution of the script, it resumes the script at the specified recovery point. Also note that when the script is resumed, its governance units are reset. Be aware, however, all scheduled scripts have a 50 MB memory limit. For complete details on scheduled script memory limits, see Understanding Memory Usage in Scheduled Scripts."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSetRedirectURL(${1:type},${2:identifier},${3:id},${4:editmode},${5:parameters})",
+    "leftLabel": "Void",
+    "description": "Sets the redirect URL by resolving to a NetSuite resource. Note that all parameters must be prefixed with \u003cstrong\u003ecustparam\u003c/strong\u003e otherwise an SSS_INVALID_ARG error will be thrown."
+  }, {
+    "type": "function",
+    "snippet": "nlapiStringToDate(${1:str},${2:format})",
+    "leftLabel": "Date",
+    "description": "Converts a string to a date object, formats the date object based on the format argument passed in, and then returns the formatted date object. Be aware that leading zeroes in the month and day values are not supported."
+  }, {
+    "type": "function",
+    "snippet": "nlapiStringToXML(${1:text})",
+    "description": "Parses a String into a W3C XML document. This API is useful if you want to navigate/query a structured XML document more effectively using either the Document API or NetSuite built-in XPath functions."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSubmitCSVImport(${1:nlobjCSVImport})",
+    "description": "Submits a CSV import job to asynchronously import record data into NetSuite. This API can be used to:"
+  }, {
+    "type": "function",
+    "snippet": "nlapiSubmitConfiguration(${1:name})",
+    "leftLabel": "Void",
+    "description": "Use this API to submit changes to a configuration page that was loaded into the system using nlapiLoadConfiguration(type). The following configuration pages support SuiteScript: Company Information, General Preferences, Enable Features, Accounting Preferences, Accounting Periods, Tax Periods."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSubmitField(${1:type},${2:id},${3:fields},${4:values},${5:doSourcing})",
+    "leftLabel": "Void",
+    "description": "Updates one or more body fields or custom fields on a record. This function can be used on any record that supports inline editing and on any body field or custom field that supports inline editing. Note that this function cannot be used to update sublist �line item� fields."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSubmitFile(${1:file})",
+    "leftLabel": "Number",
+    "description": "Submits a file and returns the internal ID to the file that was added to (or updated in) the NetSuite file cabinet. Note that if a file with the same name exists in the folder that this file is added to, then that file will be updated."
+  }, {
+    "type": "function",
+    "snippet": "nlapiSubmitRecord(${1:record},${2:doSourcing},${3:ignoreMandatoryFields})",
+    "leftLabel": "Number",
+    "description": "Submits and commits new records or changes applied to an existing record and returns the internalId for the committed record. The nlapiSumitRecord function can be used in conjunction with nlapiCreateRecord or nlapiLoadRecord in order to create or modify a record related to the current one."
+  }, {
+    "type": "function",
+    "snippet": "nlapiTransformRecord(${1:type},${2:id},${3:transformType},${4:transformValues})",
+    "leftLabel": "nlobjRecord",
+    "description": "Initializes a new record using data from an existing record of a different type and returns an nlobjRecord. This function can be useful for automated order processing such as creating item fulfillment transactions and invoices off of orders."
+  }, {
+    "type": "function",
+    "snippet": "nlapiTriggerWorkflow(${1:recordtype},${2:id},${3:workflowid},${4:actionid})",
+    "leftLabel": "Number",
+    "description": "Use this API to trigger a workflow on a record. The actions and transitions of the workflow will be evaluated for the record based on the current state that it is in."
+  }, {
+    "type": "function",
+    "snippet": "nlapiValidateXML(${1:xmlDocument},${2:schemaDocument},${3:schemaFolderId})",
+    "description": "Validates a supplied XML document against a supplied XML Schema (XSD Document)."
+  }, {
+    "type": "function",
+    "snippet": "nlapiViewCurrentLineItemSubrecord(${1:sublist},${2:fldname})",
+    "leftLabel": "nlobjSubrecord",
+    "description": "Returns a nlobjSubrecord object. Use this API to view a subrecord from a \u003cstrong\u003esublist\u003c/strong\u003e field on the parent record. Calling this API analogous to doing a �get� on a subrecord, however, the nlobjSubrecord object returned is in \u003cstrong\u003eread-only\u003c/strong\u003e mode. Therefore, an error is thrown if you attempt to edit a subrecord returned by this API."
+  }, {
+    "type": "function",
+    "snippet": "nlapiViewLineItemSubrecord(${1:sublist},${2:fldname},${3:linenum})",
+    "leftLabel": "nlobjSubrecord",
+    "description": "Returns a nlobjSubrecord object. Use this API to view a subrecord from a \u003cstrong\u003esublist\u003c/strong\u003e field on the parent record. Calling this API analogous to doing a �get� on a subrecord, however, the nlobjSubrecord object returned is in read-only mode. Therefore, an error is thrown if you attempt to edit a subrecord returned by this function."
+  }, {
+    "type": "function",
+    "snippet": "nlapiViewSubrecord(${1:fldname})",
+    "leftLabel": "nlobjSubrecord",
+    "description": "Returns a nlobjSubrecord object. Use this API to view a subrecord from a \u003cstrong\u003ebody\u003c/strong\u003e field on the parent record. Calling this API analogous to doing a �get� on a subrecord, however, the nlobjSubrecord object returned is in read-only mode. Therefore, an error is thrown if you attempt to edit a subrecord returned by this function."
+  }, {
+    "type": "function",
+    "snippet": "nlapiVoidTransaction(${1:transactionType},${2:recordId})",
+    "leftLabel": "Number",
+    "description": "When you void a transaction, its total and all its line items are set to zero, but the transaction is not removed from the system. NetSuite supports two types of voids: direct voids and voids by reversing journal. See the help topic Voiding, Deleting, or Closing Transactions for additional information."
+  }, {
+    "type": "function",
+    "snippet": "nlapiXMLToPDF(${1:xmlstring})",
+    "leftLabel": "nlobjFile",
+    "description": "Use this API in conjunction with the Big Faceless Report Generator built by Big Faceless Organization (BFO). The BFO Report Generator is a third-party library used for converting XML to PDF documents. Using nlapiXMLToPDF in combination with the BFO report library, SuiteScript developers can now generate PDF reports from Suitelets."
+  }, {
+    "type": "function",
+    "snippet": "nlapiXMLToString(${1:xml})",
+    "leftLabel": "String",
+    "description": "Converts (serializes) an XML document into a String. This API is useful if you want to serialize and store a Document in a custom field (for example)."
+  }, {
+    "type": "function",
+    "snippet": "nlapiYieldScript()",
+    "description": "Creates a recovery point and then reschedules the script. The newly rescheduled script has its governance units reset, and is then placed at the back of the scheduled script queue. To summarize, nlapiYieldScript works as follows:"
+  }]
 }
