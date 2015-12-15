@@ -1,3 +1,3 @@
-# autocomplete-netsuite package
+# autocomplete-netsuite
 
-An autocomplete package for atom, that autocomplete's functions from the NetSuite SuiteScript api.
+An autocomplete package for atom, that autocompletes functions from the NetSuite SuiteScript api.
