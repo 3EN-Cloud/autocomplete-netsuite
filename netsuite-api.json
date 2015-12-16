@@ -3,7 +3,8 @@
     "type": "function",
     "snippet": "nlapiAddDays(${1:d},${2:days})",
     "leftLabel": "Date",
-    "description": "Adds/subtracts a number of days to or from a date object"
+    "description": "Adds/subtracts a number of days to or from a date object",
+    "descriptionMoreURL": "https://system.na1.netsuite.com/app/help/helpcenter.nl?fid=section_N3061128.html#bridgehead_N3061216"
   }, {
     "type": "function",
     "snippet": "nlapiAddMonths(${1:d},${2:months})",
@@ -152,6 +153,7 @@
   }, {
     "type": "function",
     "snippet": "nlapiExchangeRate(${1:sourceCurrency},${2:targetCurrency},${3:effectiveDate})",
+    "leftLabel": "",
     "description": "Use this API to get the exchange rate between two currencies based on a certain date. The exchange rate values you are getting are those that appear in the Exchange Rate column of the Currency Exchange Rates record (see figure)."
   }, {
     "type": "function",
@@ -341,6 +343,7 @@
   }, {
     "type": "function",
     "snippet": "nlapiGetUser()",
+    "leftLabel": "",
     "description": "Returns the internalId of the current NetSuite user. This API is supported in client, user event, scheduled, portlet, and Suitelet scripts."
   }, {
     "type": "function",
@@ -410,10 +413,12 @@
   }, {
     "type": "function",
     "snippet": "nlapiMergeRecord(${1:id},${2:baseType},${3:baseId},${4:altType},${5:altId},${6:fields})",
+    "leftLabel": "",
     "description": "\u003cstrong\u003eTHIS API HAS BEEN DEPRECATED\u003c/strong\u003e"
   }, {
     "type": "function",
     "snippet": "nlapiMergeTemplate(${1:id},${2:baseType},${3:baseId},${4:altType},${5:altId},${6:fields})",
+    "leftLabel": "",
     "description": "\u003cstrong\u003eTHIS API HAS BEEN DEPRECATED\u003c/strong\u003e"
   }, {
     "type": "function",
@@ -618,6 +623,7 @@
   }, {
     "type": "function",
     "snippet": "nlapiSetRecoveryPoint()",
+    "leftLabel": "",
     "description": "Creates a recovery point saving the state of the script\u0027s execution. When NetSuite resumes the execution of the script, it resumes the script at the specified recovery point. Also note that when the script is resumed, its governance units are reset. Be aware, however, all scheduled scripts have a 50 MB memory limit. For complete details on scheduled script memory limits, see Understanding Memory Usage in Scheduled Scripts."
   }, {
     "type": "function",
@@ -632,10 +638,12 @@
   }, {
     "type": "function",
     "snippet": "nlapiStringToXML(${1:text})",
+    "leftLabel": "",
     "description": "Parses a String into a W3C XML document. This API is useful if you want to navigate/query a structured XML document more effectively using either the Document API or NetSuite built-in XPath functions."
   }, {
     "type": "function",
     "snippet": "nlapiSubmitCSVImport(${1:nlobjCSVImport})",
+    "leftLabel": "",
     "description": "Submits a CSV import job to asynchronously import record data into NetSuite. This API can be used to:"
   }, {
     "type": "function",
@@ -670,6 +678,7 @@
   }, {
     "type": "function",
     "snippet": "nlapiValidateXML(${1:xmlDocument},${2:schemaDocument},${3:schemaFolderId})",
+    "leftLabel": "",
     "description": "Validates a supplied XML document against a supplied XML Schema (XSD Document)."
   }, {
     "type": "function",
@@ -704,6 +713,2401 @@
   }, {
     "type": "function",
     "snippet": "nlapiYieldScript()",
+    "leftLabel": "",
     "description": "Creates a recovery point and then reschedules the script. The newly rescheduled script has its governance units reset, and is then placed at the back of the scheduled script queue. To summarize, nlapiYieldScript works as follows:"
+  }, {
+    "type": "function",
+    "snippet": "addField(${1:name},${2:type},${3:label},${4:source},${5:group})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjAssistant. Use this method to add a field to an assistant and return the field object.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "addFieldGroup(${1:name},${2:label})",
+    "leftLabel": "nlobjFieldGroup",
+    "description": "Member Of: nlobjAssistant. Use this method to add a field group to an assistant page. Note that when a field group is added to an assistant, by default it is collapsible. Also, by default, it will appear as uncollapsed when the page loads. If you want to change these behaviors, you will use the nlobjFieldGroup.setCollapsible(collapsible, hidden) method.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "addStep(${1:name},${2:label})",
+    "leftLabel": "nlobjAssistantStep",
+    "description": "Member Of: nlobjAssistant. Use this method to add a step to an assistant.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "addSubList(${1:name},${2:type},${3:label})",
+    "leftLabel": "nlobjSubList",
+    "description": "Member Of: nlobjAssistant. Use this method to add a sublist to an assistant page and return an nlobjSubList object. Note that only inlineeditor sublists can be added to assistant pages.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "getAllFieldGroups()",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjAssistant. Use this method to get all field groups on an assistant page. Also note that where you call this method matters. If you call getAllFieldGroups() early in your script, and then add three more field groups at the end of your script, getAllFieldGroups() will return only those field groups that were added prior to the call.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "getAllFields()",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjAssistant. Use this method to get all fields in an assistant. Regardless of which page or step the fields have been added to, all fields will be returned. Also note that where you call this method matters. If you call getAllFields() early in your script, and then add ten more fields at the end of your script, getAllFields() will return only those fields that were added prior to the call.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "getAllSteps()",
+    "leftLabel": "nlobjAssistantStep[]",
+    "description": "Member Of: nlobjAssistant. Use this method to return an array of all the assistant steps for this assistant.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "getAllSubLists()",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjAssistant. Use this method to get all sublist names that appear on an assistant page. Also note that where you call this method matters. If you call getAllSubLists() early in your script, and then add three more sublists at the end of your script, getAllSubLists() will return only those sublists that were added prior to the call.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "getCurrentStep()",
+    "leftLabel": "nlobjAssistantStep",
+    "description": "Member Of: nlobjAssistant. Use this method to get the current step that was set via nlobjAssistant.setCurrentStep(step). After getting the current step, you can add fields, field groups, and sublists to the step. (question about getName in John\u0027s sample)",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "getField(${1:name})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjAssistant. Use this method to return a field on an assistant page.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "getFieldGroup(${1:name})",
+    "leftLabel": "nlobjFieldGroup",
+    "description": "Member Of: nlobjAssistant. Use this method to return a field group on an assistant page.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "getLastAction()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjAssistant. Use this method to get the last submitted action that was performed by the user. Typically you will use getNextStep() to determine the next step (based on the last action).",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "getLastStep()",
+    "leftLabel": "nlobjAssistantStep",
+    "description": "Member Of: nlobjAssistant. Use this method to get the step the last submitted action came from.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "getNextStep()",
+    "leftLabel": "nlobjAssistantStep",
+    "description": "Member Of: nlobjAssistant. Use this method to return the next logical step corresponding to the user\u0027s last submitted action. You should only call this method after you have successfully captured all the information from the last step and are ready to move on to the next step. You would use the return value to set the current step prior to continuing.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "getStep(${1:name})",
+    "leftLabel": "nlobjAssistantStep",
+    "description": "Member Of: nlobjAssistant. Use this method to return an nlobjAssistantStep object on an assistant page.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "getStepCount()",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjAssistant. Use this method to get the total number of steps in an assistant.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "getSubList(${1:name})",
+    "leftLabel": "nlobjSubList",
+    "description": "Member Of: nlobjAssistant. Use this method to return a sublist on an assistant page (template file just has metadata on a sublist).",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "hasError()",
+    "leftLabel": "Boolean",
+    "description": "Member Of: nlobjAssistant. Use this method to determine if an assistant has an error message to display for the current step.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "isFinished()",
+    "leftLabel": "Boolean",
+    "description": "Member Of: nlobjAssistant. Use this method to determine when all steps in an assistant are completed.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "sendRedirect(${1:response})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjAssistant. Use this method to manage redirects in an assistant. In most cases, an assistant redirects to itself as in:",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "setCurrentStep(${1:step})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjAssistant. Use this method to mark a step as the current step. In the UI, the step will be highlighted when the user is on that step (see figure).",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "setError(${1:html})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjAssistant. Use this method to set an error message for the current step. If you choose, you can use HTML tags to format the message.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "setFieldValues(${1:values})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjAssistant. Use this method to set values for fields on an assistant page.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "setFinished(${1:html})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjAssistant. Use this method to mark the last page in an assistant. Set the rich text to display a completion message on the last page.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "setNumbered(${1:hasStepNumber})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjAssistant. Use this method to display steps without numbers.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "setOrdered(${1:ordered})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjAssistant. Use this method to enforce a sequential ordering of assistant steps. If steps are ordered, users must complete the current step before the assistant will allow them to proceed to the next step. From a display perspective, ordered steps will always appear in the left panel of the assistant (see first figure). Note that by default, steps in an assistant are ordered.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "setScript(${1:script})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjAssistant. Use this method to set the scriptId for a global client script you want to run on an assistant page.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "setShortcut(${1:show})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjAssistant. Use this method to show/hide the \u003cstrong\u003eAdd to Shortcuts\u003c/strong\u003e link that appears in the top-right corner of an assistant page. Note that if you do not call this method in your script, the default is to show the Add to Shortcuts link at the top of all assistant pages. Therefore, it is recommended that you use this method only if you want to hide this link.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "setSplash(${1:title},${2:text1},${3:text2})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjAssistant. Use this method to set the splash screen for an assistant page.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "setTitle(${1:title})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjAssistant. Use this method to set the title for the assistant. If you have already defined the title using nlapiCreateAssistant(title, hideHeader), you do not need to call the setTitle(title) method. Also note that the title you provide using setTitle(title) will override the title specified in the nlapiCreateAssistant() function.",
+    "memberOf": "nlobjAssistant"
+  }, {
+    "type": "function",
+    "snippet": "getAllFields()",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjAssistantStep. Use this method to get all fields entered by the user during the step.",
+    "memberOf": "nlobjAssistantStep"
+  }, {
+    "type": "function",
+    "snippet": "getAllLineItemFields(${1:group})",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjAssistantStep. Use this method to get all sublist fields entered by the user during this step.",
+    "memberOf": "nlobjAssistantStep"
+  }, {
+    "type": "function",
+    "snippet": "getAllLineItems()",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjAssistantStep. Use this method to get all sublists entered by the user during this step.",
+    "memberOf": "nlobjAssistantStep"
+  }, {
+    "type": "function",
+    "snippet": "getFieldValue(${1:name})",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjAssistantStep. Use this method to get the value of a field entered by the user during this step.",
+    "memberOf": "nlobjAssistantStep"
+  }, {
+    "type": "function",
+    "snippet": "getFieldValues(${1:name})",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjAssistantStep. Use this method to get the selected values of a multi-select field as an Array.",
+    "memberOf": "nlobjAssistantStep"
+  }, {
+    "type": "function",
+    "snippet": "getLineItemCount(${1:group})",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjAssistantStep. Use the method to get the number of lines previously entered by the user in this step.",
+    "memberOf": "nlobjAssistantStep"
+  }, {
+    "type": "function",
+    "snippet": "getLineItemValue(${1:group},${2:name},${3:line})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjAssistantStep. Use this method to get the value of a line item (sublist) field entered by the user during this step.",
+    "memberOf": "nlobjAssistantStep"
+  }, {
+    "type": "function",
+    "snippet": "getStepNumber()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjAssistantStep. Use this method to get a step number. The number returned represents where this step appears sequentially in the assistant.",
+    "memberOf": "nlobjAssistantStep"
+  }, {
+    "type": "function",
+    "snippet": "setHelpText(${1:help})",
+    "leftLabel": "nlobjAssistantSte",
+    "description": "Member Of: nlobjAssistantStep. Use this method to set help text for an assistant step.",
+    "memberOf": "nlobjAssistantStep"
+  }, {
+    "type": "function",
+    "snippet": "setLabel(${1:label})",
+    "leftLabel": "nlobjAssistantStep",
+    "description": "Member Of: nlobjAssistantStep. Use this method to set the label for an assistant step. Note that you can also create a label for a step when the step is first added to the assistant. Do this using nlobjAssistant.addStep(name, label).",
+    "memberOf": "nlobjAssistantStep"
+  }, {
+    "type": "function",
+    "snippet": "setDisabled(${1:disabled})",
+    "leftLabel": "nlobjButton",
+    "description": "Member Of: nlobjButton. Disables the button. When using this API, the assumption is that you have already defined the button\u0027s UI label when you created the button using nlobjForm.addButton(name, label, script). The setDisabled() method simply grays-out the button\u0027s appearance in the UI.",
+    "memberOf": "nlobjButton"
+  }, {
+    "type": "function",
+    "snippet": "setLabel(${1:label})",
+    "leftLabel": "nlobjButton",
+    "description": "Member Of: nlobjButton. Sets the UI label for the button. When using this API, the assumption is that you have already defined the button\u0027s UI label when you created the button using nlobjForm.addButton(name, label, script). You can set setLabel() to trigger based on the execution context. For example, based on the user viewing a page, you can use setLabel() to re-label a button\u0027s UI label so that the label is meaningful to that particular user.",
+    "memberOf": "nlobjButton"
+  }, {
+    "type": "function",
+    "snippet": "setVisible(${1:visible})",
+    "leftLabel": "nlobjButton",
+    "description": "Member Of: nlobjButton. Sets the button as hidden in the UI. This API is supported on custom buttons and on some standard NetSuite buttons. For a list of standard buttons that support this API, see Button IDs in the NetSuite Help Center.",
+    "memberOf": "nlobjButton"
+  }, {
+    "type": "function",
+    "snippet": "append(${1:string})",
+    "leftLabel": "nlobjCredentialBuilder",
+    "description": "Member Of: nlobjCredentialBuilder. Appends a passed in string to an nlobjCredentialBuilder object.",
+    "memberOf": "nlobjCredentialBuilder"
+  }, {
+    "type": "function",
+    "snippet": "base64()",
+    "leftLabel": "nlobjCredentialBuilder",
+    "description": "Member Of: nlobjCredentialBuilder. Encodes an nlobjCredentialBuilder object per the base64 scheme.",
+    "memberOf": "nlobjCredentialBuilder"
+  }, {
+    "type": "function",
+    "snippet": "md5()",
+    "leftLabel": "nlobjCredentialBuilder",
+    "description": "Member Of: nlobjCredentialBuilder. Hashes an nlobjCredentialBuilder object with the MD5 hash function.",
+    "memberOf": "nlobjCredentialBuilder"
+  }, {
+    "type": "function",
+    "snippet": "replace(${1:string1},${2:string2})",
+    "leftLabel": "nlobjCredentialBuilder",
+    "description": "Member Of: nlobjCredentialBuilder. Replaces all instances of string1 with string2.",
+    "memberOf": "nlobjCredentialBuilder"
+  }, {
+    "type": "function",
+    "snippet": "sha1()",
+    "leftLabel": "nlobjCredentialBuilder",
+    "description": "Member Of: nlobjCredentialBuilder. Hashes an nlobjCredentialBuilder object with the SHA-1 hash function.",
+    "memberOf": "nlobjCredentialBuilder"
+  }, {
+    "type": "function",
+    "snippet": "sha256()",
+    "leftLabel": "nlobjCredentialBuilder",
+    "description": "Member Of: nlobjCredentialBuilder. Hashes an nlobjCredentialBuilder object with the SHA-256 hash function.",
+    "memberOf": "nlobjCredentialBuilder"
+  }, {
+    "type": "function",
+    "snippet": "utf8()",
+    "leftLabel": "nlobjCredentialBuilder",
+    "description": "Member Of: nlobjCredentialBuilder. Encodes an nlobjCredentialBuilder object per the UTF-8 scheme.",
+    "memberOf": "nlobjCredentialBuilder"
+  }, {
+    "type": "function",
+    "snippet": "setLinkedFile(${1:sublist},${2:file})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjCSVImport. Sets the data to be imported in a linked file for a multi-file import job, by referencing a file in the file cabinet using nlapiLoadFile, or by inputting CSV data as raw string.",
+    "memberOf": "nlobjCSVImport"
+  }, {
+    "type": "function",
+    "snippet": "setMapping(${1:savedImport})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjCSVImport. Sets the name of the saved import map to be used for an import, by referencing the internal ID or script ID of the import map.",
+    "memberOf": "nlobjCSVImport"
+  }, {
+    "type": "function",
+    "snippet": "setOption(${1:option},${2:value})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjCSVImport. Sets the name of the import job to be shown on the status page for CSV imports.",
+    "memberOf": "nlobjCSVImport"
+  }, {
+    "type": "function",
+    "snippet": "setPrimaryFile(${1:file})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjCSVImport. Sets the data to be imported in the primary file for an import job, by referencing a file in the file cabinet using nlapiLoadFile, or by inputting CSV data as raw string.",
+    "memberOf": "nlobjCSVImport"
+  }, {
+    "type": "function",
+    "snippet": "setQueue(${1:string})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjCSVImport. Overrides the CSV import queue preference. The stored queue preference is not altered; setQueue must be called each time an override is needed.",
+    "memberOf": "nlobjCSVImport"
+  }, {
+    "type": "function",
+    "snippet": "addParamToURL(${1:param},${2:value},${3:dynamic})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjColumn. Adds a URL parameter (optionally defined per row) to this column\u0027s URL. Should only be called after calling setURL(url, dynamic)",
+    "memberOf": "nlobjColumn"
+  }, {
+    "type": "function",
+    "snippet": "setLabel(${1:label})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjColumn. Sets the UI label for this column",
+    "memberOf": "nlobjColumn"
+  }, {
+    "type": "function",
+    "snippet": "setURL(${1:url},${2:dynamic})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjColumn. Sets the base URL (optionally defined per row) for this column",
+    "memberOf": "nlobjColumn"
+  }, {
+    "type": "function",
+    "snippet": "getAllFields()",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjConfiguration. Use this method to return a normal keyed array of all the field names on a configuration page.",
+    "memberOf": "nlobjConfiguration"
+  }, {
+    "type": "function",
+    "snippet": "getField(${1:fldnam})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjConfiguration. Use the method to return field metadata for a field",
+    "memberOf": "nlobjConfiguration"
+  }, {
+    "type": "function",
+    "snippet": "getFieldText(${1:name})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjConfiguration. Use this method to return the UI display value for a select field. This API is supported in select fields only.",
+    "memberOf": "nlobjConfiguration"
+  }, {
+    "type": "function",
+    "snippet": "getFieldTexts(${1:name})",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjConfiguration. Use this method to return the UI display values for a multiselect field",
+    "memberOf": "nlobjConfiguration"
+  }, {
+    "type": "function",
+    "snippet": "getFieldValue(${1:name})",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjConfiguration. Use this method to return the internal ID value of a field",
+    "memberOf": "nlobjConfiguration"
+  }, {
+    "type": "function",
+    "snippet": "getFieldValues(${1:name})",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjConfiguration. Returns a \u003cstrong\u003eread-only\u003c/strong\u003e array of multi-select field values. This API is supported on multi-select fields only.",
+    "memberOf": "nlobjConfiguration"
+  }, {
+    "type": "function",
+    "snippet": "getType()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjConfiguration. Use this method to return the internal ID of a configuration page, for example, \u003cstrong\u003eaccountingpreferences\u003c/strong\u003e or \u003cstrong\u003etaxperiods\u003c/strong\u003e.",
+    "memberOf": "nlobjConfiguration"
+  }, {
+    "type": "function",
+    "snippet": "setFieldText(${1:name},${2:text})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjConfiguration. Use this method to set the value of a select field using its corresponding display value. This API is supported on select fields only.",
+    "memberOf": "nlobjConfiguration"
+  }, {
+    "type": "function",
+    "snippet": "setFieldTexts(${1:name},${2:text})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjConfiguration. Use this method to set the values (via the UI display values) of a multi-select field. This API is supported on multi-select fields only.",
+    "memberOf": "nlobjConfiguration"
+  }, {
+    "type": "function",
+    "snippet": "setFieldValue(${1:name},${2:value})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjConfiguration. Use this method to set the value of a field",
+    "memberOf": "nlobjConfiguration"
+  }, {
+    "type": "function",
+    "snippet": "setFieldValues(${1:name},${2:value})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjConfiguration. Use this method to set the value of a multi-select field. This API is supported on multi-select fields only.",
+    "memberOf": "nlobjConfiguration"
+  }, {
+    "type": "function",
+    "snippet": "getColorPreferences()",
+    "leftLabel": "Object",
+    "description": "Member Of: nlobjContext. Returns an Object containing name-value pairs of color groups to their corresponding RGB hex color based on the currently logged in user\u0027s color theme preferences.",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getCompany()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjContext. Returns the currently logged in user\u0027s account ID",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getDepartment()",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjContext. Returns the internal ID of the currently logged in user\u0027s department",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getDeploymentId()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjContext. Returns the deploymentId for the current script deployment (ie., the currently executing script)",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getEmail()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjContext. Returns the currently logged in user\u0027s e-mail address. The \u003cstrong\u003eemail\u003c/strong\u003e field on the user\u0027s employee record must contain an email address.",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getEnvironment()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjContext. Returns the environment in which the current script is being executed. Valid values are SANDBOX | PRODUCTION | BETA | INTERNAL. (means it is running in an internal NS environment that customer does not have access to)",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getExecutionContext()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjContext. Returns context information about what triggered the current script. Possible return values are:",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getFeature(${1:name})",
+    "leftLabel": "Boolean",
+    "description": "Member Of: nlobjContext. Use this method to determine if a particular feature is enabled in a NetSuite account. These are the features that appear on the Enable Features page (Setup \u003e Company \u003e Enable Features).",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getLocation()",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjContext. Returns the internal ID of the currently logged in user\u0027s location",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getLogLevel()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjContext. Returns the script logging level for the current script execution. This method is not supported on client scripts.",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getName()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjContext. Returns the currently logged in user\u0027s name",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getPercentComplete()",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjContext. Return the % complete specified for the current scheduled script execution. The return value will appear in the \u003cstrong\u003e%Complete\u003c/strong\u003e column in the Scheduled Script Status page. Note that this method can only be called from scheduled scripts.",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getPermission(${1:name})",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjContext. Use this method to get a user\u0027s permission level for a given permission. For information on working with NetSuite permissions, see the topic Understanding NetSuite Permissions in the NetSuite Help Center.",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getPreference(${1:name})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjContext. Use this method to get the value of a NetSuite preference. Currently only \u003cstrong\u003eGeneral Preferences\u003c/strong\u003e and \u003cstrong\u003eAccounting Preferences\u003c/strong\u003e are exposed in SuiteScript. (You can view General Preferences by going to Setup \u003e Company \u003e General Preferences. View Accounting Preferences by going to Setup \u003e Accounting \u003e Accounting Preferences.)",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getQueueCount()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjContext. Returns the number of scheduled script queues in a given account.",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getRemainingUsage()",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjContext. Returns the remaining amount of unit usage for the current script",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getRole()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjContext. Returns the internal ID of the currently logged in user\u0027s role",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getRoleCenter()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjContext. Returns the internal ID of the currently logged in user\u0027s center type (role center)",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getRoleId()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjContext. Returns the custom scriptId of the role (as opposed to the internal numerical ID).",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getScriptId()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjContext. Returns the scriptId for the currently executing script",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getSessionObject(${1:name})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjContext. Use this method to get the value of a user-defined session object for the current user.",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getSetting(${1:type},${2:name})",
+    "leftLabel": "String|Number",
+    "description": "Member Of: nlobjContext. Use this API to get a system or script setting. Note that if you want to get session, feature, or permission settings directly, you can also use these nlobjContext methods:",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getSubsidiary()",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjContext. Returns the internal ID of the currently logged in user\u0027s subsidiary",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getUser()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjContext. Returns the currently logged in user\u0027s internal ID",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "getVersion()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjContext. Returns the version of NetSuite that the method is called in. For example, if getVersion is executed in an account running NetSuite 2010.2, the value returned is \u003cstrong\u003e2010.2\u003c/strong\u003e. If getVersion is executed in an account running NetSuite 2010.1, the value returned is \u003cstrong\u003e2010.1\u003c/strong\u003e.",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "setPercentComplete(${1:pct})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjContext. Sets the percent complete for the currently executing scheduled script. Note that this method can only be called from scheduled scripts.",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "setSessionObject(${1:name},${2:value})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjContext. Use this method to add or set the value of a user-defined session object for the current user. This value is valid during the current user\u0027s login.",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "setSetting(${1:type},${2:name},${3:value})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjContext. Sets the value of a script or user-defined setting. Only available in server scripts.",
+    "memberOf": "nlobjContext"
+  }, {
+    "type": "function",
+    "snippet": "setEntityType(${1:entityType})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjDuplicateJobRequest. @param {constant} entityType [required] - Set to a constant value defined on the nlobjDuplicateJobRequest object. When you pass in the constant, your code should look like \u003cnlobjDuplicateJobRequestInstance\u003e.\u003cconstant\u003e. The following are the constant values:",
+    "memberOf": "nlobjDuplicateJobRequest"
+  }, {
+    "type": "function",
+    "snippet": "setMasterId(${1:masterID})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjDuplicateJobRequest. @param {String} masterID [required] - Required and valid \u003cstrong\u003eonly\u003c/strong\u003e if setMasterSelectionMode(mode) is set to MASTERSELECTIONMODE_SELECT_BY_ID",
+    "memberOf": "nlobjDuplicateJobRequest"
+  }, {
+    "type": "function",
+    "snippet": "setMasterSelectionMode(${1:mode})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjDuplicateJobRequest. @param {String} mode [required] - Set to a constant value defined on the nlobjDuplicateJobRequest object. When you pass in the constant, your code should look like \u003cnlobjDuplicateJobRequestInstance\u003e.\u003cconstant\u003e. The following are the constant values:",
+    "memberOf": "nlobjDuplicateJobRequest"
+  }, {
+    "type": "function",
+    "snippet": "setOperation(${1:operation})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjDuplicateJobRequest. @param {String} operation [required] - Set to a constant value defined on the nlobjDuplicateJobRequest object. When you pass in the constant, your code should look like \u003cnlobjDuplicateJobRequestInstance\u003e.\u003cconstant\u003e. The following are the constant values:",
+    "memberOf": "nlobjDuplicateJobRequest"
+  }, {
+    "type": "function",
+    "snippet": "setRecords(${1:dupeRecords})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjDuplicateJobRequest. @param {Array} dupeRecords [required] - Array of records to be merged",
+    "memberOf": "nlobjDuplicateJobRequest"
+  }, {
+    "type": "function",
+    "snippet": "merge()",
+    "leftLabel": "nlobjMergeResult",
+    "description": "Member Of: nlobjEmailMerger. Use this method to perform a mail merge on an nlobjEmailMerger object (a scriptable email template) and the records designated with the nlobjEmailMerger  set methods. This method has a governance of 20 usage units.",
+    "memberOf": "nlobjEmailMerger"
+  }, {
+    "type": "function",
+    "snippet": "setCustomRecord(${1:recordType},${2:recordId})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjEmailMerger. Use this method to designate a custom record to use in a mail merge.",
+    "memberOf": "nlobjEmailMerger"
+  }, {
+    "type": "function",
+    "snippet": "setEntity(${1:entityType},${2:customerId})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjEmailMerger. @param {String} entityType [required] �",
+    "memberOf": "nlobjEmailMerger"
+  }, {
+    "type": "function",
+    "snippet": "setRecipient(${1:recipientType},${2:recipientId})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjEmailMerger. @param {String} recipientType [required] � The record type of the record to use in the mail merge. Use one of the following arguments:",
+    "memberOf": "nlobjEmailMerger"
+  }, {
+    "type": "function",
+    "snippet": "setSupportCase(${1:caseId})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjEmailMerger. @param {String} caseId [required] � The internal ID of the Case record to use in the mail merge.",
+    "memberOf": "nlobjEmailMerger"
+  }, {
+    "type": "function",
+    "snippet": "setTransaction(${1:transactionId})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjEmailMerger. @param {String} transactionId [required] � the internal ID of the Transaction record to use in the mail merge.",
+    "memberOf": "nlobjEmailMerger"
+  }, {
+    "type": "function",
+    "snippet": "getCode()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjError. Returns the error code for this system or user-defined error",
+    "memberOf": "nlobjError"
+  }, {
+    "type": "function",
+    "snippet": "getDetails()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjError. Returns the error message (user-defined or system) associated with this error",
+    "memberOf": "nlobjError"
+  }, {
+    "type": "function",
+    "snippet": "getId()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjError. Returns an error reference ID. If you have included a catch block in your code, you can use getId() to get the internal reference number for an unexpected error. This method is useful if you want to keep your own log of error numbers or you want to email the value of getId() to someone else.",
+    "memberOf": "nlobjError"
+  }, {
+    "type": "function",
+    "snippet": "getInternalId()",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjError. Returns the internal ID of the submitted record if this error was thrown in an \u003cstrong\u003eafterSubmit\u003c/strong\u003e script",
+    "memberOf": "nlobjError"
+  }, {
+    "type": "function",
+    "snippet": "getStackTrace()",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjError. Returns the stacktrace containing the location of the error",
+    "memberOf": "nlobjError"
+  }, {
+    "type": "function",
+    "snippet": "getUserEvent()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjError. Return the name of the user event script (if applicable) that the error was thrown from.",
+    "memberOf": "nlobjError"
+  }, {
+    "type": "function",
+    "snippet": "addSelectOption(${1:value},${2:text},${3:selected})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjField. Adds a select option to a SELECT field",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "getLabel()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjField. Returns field UI label",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "getName()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjField. Returns the field internal ID",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "getSelectOptions(${1:filter},${2:filteroperator})",
+    "leftLabel": "array",
+    "description": "Member Of: nlobjField. Use this API to obtain a list of available options on a select field. This API can be used on both standard and custom select fields. Only the first 1,000 available options will be returned by this API.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "getType()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjField. Returns the field type - for example, text, date, currency, select, checkbox, etc.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "setAlias(${1:alias})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjField. Sets the alias used to set the value for this field. By default the alias is equal to the field\u0027s name. The method is only supported on scripted fields via the UI Object API.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "setBreakType(${1:breaktype})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjField. Use this method to set the layout type for a field and optionally the break type. This method is only supported on scripted fields that have been created using the UI Object API.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "setDefaultValue(${1:value})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjField. Sets the default value for this field. This method is only supported on scripted fields via the UI object API.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "setDisplaySize(${1:width},${2:height})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjField. Sets the height and width for the field. Only supported on multi-selects, long text, rich text, and fields that get rendered as INPUT (type\u003dtext) fields. This API is not supported on list/record fields. This method is only supported on scripted fields via the UI object API.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "setDisplayType(${1:type})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjField. Sets the display type for this field.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "setHelpText(${1:help},${2:inline})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjField. Use this method to set help text for this field.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "setLabel(${1:label})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjField. Sets the UI label for this field. The method is available only on scripted fields via the UI object API.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "setLayoutType(${1:type},${2:breaktype})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjField. Sets the display type for this field and optionally the break type. This method is only supported on scripted fields via the UI Object API.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "setLinkText(${1:text})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjField. Sets the text that gets displayed in lieu of the field value for URL fields.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "setMandatory(${1:mandatory})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjField. Sets the field to mandatory. The method is only supported on scripted fields via the UI Object API.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "setMaxLength(${1:maxlength})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjField. Sets the max length for this field (only valid for text, rich text, long text, and textarea fields). This method is only supported on scripted fields via the UI Object API.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "setPadding(${1:padding})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjField. Sets the number of empty field spaces before/above this field. This method is only supported on scripted fields via the UI Object API.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "setRichTextHeight(${1:height})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjField. If \u003cstrong\u003eRich Text Editing\u003c/strong\u003e is enabled, you can use this method to set the height of the rich text field only. You can set a separate height for the text area using setDisplaySize(). When setting the height, the minimum value is 100 pixels and the maximum value is 500 pixels.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "setRichTextWidth(${1:width})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjField. If \u003cstrong\u003eRich Text Editing\u003c/strong\u003e is enabled, you can use this method to set the width of the rich text field only. You can set a separate width of the text area using setDisplaySize(). When setting the width, the minimum value is 250 pixels and the maximum value is 800 pixels.",
+    "memberOf": "nlobjField"
+  }, {
+    "type": "function",
+    "snippet": "setCollapsible(${1:collapsible},${2:hidden})",
+    "leftLabel": "nlobjFieldGroup",
+    "description": "Member Of: nlobjFieldGroup. Use this method to define whether a field group can be collapsed. You can also use this method to define if the field group will display as collapsed or expanded when the page first loads.",
+    "memberOf": "nlobjFieldGroup"
+  }, {
+    "type": "function",
+    "snippet": "setLabel(${1:label})",
+    "leftLabel": "nlobjFieldGroup",
+    "description": "Member Of: nlobjFieldGroup. Use this method to create a UI label for a field group.",
+    "memberOf": "nlobjFieldGroup"
+  }, {
+    "type": "function",
+    "snippet": "setShowBorder(${1:show})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjFieldGroup. Use this method to conditionally show or hide the border of a field group. A field group border consists of the field group title and the gray line that frames the group by default.",
+    "memberOf": "nlobjFieldGroup"
+  }, {
+    "type": "function",
+    "snippet": "setSingleColumn(${1:column})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjFieldGroup. Use this method to determine how your field group is aligned. You can choose to align it into a single column or allow NetSuite to auto-align it.",
+    "memberOf": "nlobjFieldGroup"
+  }, {
+    "type": "function",
+    "snippet": "getDescription()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjFile. @returns {String} The string description of the file. This is the description that appears in the Description field on the folder or file record.",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "getEncoding()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjFile. Returns the character encoding of a file. NetSuite supports the following encoding types:",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "getFolder()",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjFile. @returns {Number} Integer: The internal ID of the file\u0027s folder within the NetSuite file cabinet, for example \u003cstrong\u003e10, 2\u003c/strong\u003e, etc.",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "getId()",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjFile. Returns the internal ID of the file (if the file is stored in the NetSuite file cabinet)",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "getName()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjFile. Returns the name of the file",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "getSize()",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjFile. Returns the size of the file in bytes",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "getType()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjFile. Returns the type of the file",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "getURL()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjFile. Returns the URL to the file if it is stored in the NetSuite file cabinet",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "getValue()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjFile. Returns the contents of the file (base 64 encoded for binary files).",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "isInactive()",
+    "leftLabel": "Boolean",
+    "description": "Member Of: nlobjFile. @returns {Boolean} Boolean: The file\u0027s inactive status as either true or false. Returns true if the file is inactive.",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "isOnline()",
+    "leftLabel": "Boolean",
+    "description": "Member Of: nlobjFile. @returns {Boolean} Boolean: The file\u0027s online status as either true or false. Returns true if the file is �Available without Login.�",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "setDescription(${1:description})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjFile. Sets the description of the file",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "setEncoding(${1:encodingType})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjFile. Sets the character encoding of a file. The following types are supported when setting the encoding for new and existing files:",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "setFolder(${1:id})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjFile. Sets the internal ID of the folder that the file is in",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "setIsInactive(${1:inactive})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjFile. Sets the file\u0027s inactive status. When you inactive a file or folder, it no longer appears on lists unless (in the UI) you have selected the \u003cstrong\u003eShow Inactives\u003c/strong\u003e check box.",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "setIsOnline(${1:online})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjFile. Sets the file\u0027s online (�Available without Login�) status. When a file is online, other users can download the file without a login session. This means you can upload images, MP3, or any other file type to the file cabinet and give other users the file URL without giving them access to the account.",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "setName(${1:name})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjFile. Sets the name of the file",
+    "memberOf": "nlobjFile"
+  }, {
+    "type": "function",
+    "snippet": "addButton(${1:name},${2:label},${3:script})",
+    "leftLabel": "nlobjButton",
+    "description": "Member Of: nlobjForm. Adds a button to a form",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "addCredentialField(${1:id},${2:label},${3:website},${4:scriptId},${5:value},${6:entityMatch},${7:tab})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjForm. Adds a field that lets you store credentials in NetSuite to be used when invoking services provided by third parties. For example, merchants need to store credentials in NetSuite used to communicate with Payment Gateway providers when executing credit card transactions.",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "addField(${1:name},${2:type},${3:label},${4:sourceOrRadio},${5:tab})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjForm. Adds an nlobjField object to a form and returns a reference to it",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "addFieldGroup(${1:name},${2:label},${3:tab})",
+    "leftLabel": "nlobjFieldGroup",
+    "description": "Member Of: nlobjForm. Adds a field group to the form.",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "addPageLink(${1:type},${2:title},${3:url})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjForm. Adds a navigation cross-link to the form",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "addResetButton(${1:label})",
+    "leftLabel": "nlobjButton",
+    "description": "Member Of: nlobjForm. Adds a reset button to a form",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "addSubList(${1:name},${2:type},${3:label},${4:tab})",
+    "leftLabel": "nlobjSubList",
+    "description": "Member Of: nlobjForm. Adds an nlobjSubList object to a form and returns a reference to it. Note that sorting (in the UI) is not supported on static sublists created using the addSubList() method if the row count exceeds 25.",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "addSubTab(${1:name},${2:label},${3:tab})",
+    "leftLabel": "nlobjTab",
+    "description": "Member Of: nlobjForm. Adds a subtab to a form and returns an nlobjTab object reference to it.",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "addSubmitButton(${1:label})",
+    "leftLabel": "nlobjButton",
+    "description": "Member Of: nlobjForm. Adds a submit button to a form",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "addTab(${1:name},${2:label})",
+    "leftLabel": "nlobjTab",
+    "description": "Member Of: nlobjForm. Adds a tab to a form and returns an nlobjTab object reference to the tab",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "getButton(${1:name})",
+    "leftLabel": "nlobjButton",
+    "description": "Member Of: nlobjForm. Returns an nlobjButton object by name",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "getField(${1:name},${2:radio})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjForm. Returns an nlobjField object by name",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "getSubList(${1:name})",
+    "leftLabel": "nlobjSubList",
+    "description": "Member Of: nlobjForm. Returns an nlobjSubList object by name",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "getSubTab(${1:name})",
+    "leftLabel": "nlobjTab",
+    "description": "Member Of: nlobjForm. Returns an nlobjTab object by name",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "getTab(${1:name})",
+    "leftLabel": "nlobjTab",
+    "description": "Member Of: nlobjForm. Returns an nlobjTab object by name",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "getTabs()",
+    "leftLabel": "nlobjTab[]",
+    "description": "Member Of: nlobjForm. Returns an array of nlobjTab objects containing all the tabs in a form.",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "insertField(${1:field},${2:nextfld})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjForm. Inserts a field (nlobjField) in front of another field and returns a reference to it",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "insertSubList(${1:sublist},${2:nextsub})",
+    "leftLabel": "nlobjSubList",
+    "description": "Member Of: nlobjForm. Inserts a sublist (nlobjSubList) in front of another sublist/subtab and returns a reference to it",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "insertSubTab(${1:subtab},${2:nextsub})",
+    "leftLabel": "nlobjTab",
+    "description": "Member Of: nlobjForm. Inserts a subtab (nlobjTab) in front of another sublist/subtab and returns a reference to it",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "insertTab(${1:tab},${2:nexttab})",
+    "leftLabel": "nlobjTab",
+    "description": "Member Of: nlobjForm. Inserts a tab (nlobjTab) in front of another tab and returns a reference to it",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "removeButton(${1:name})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjForm. Removes an nlobjButton object. This method can be used on custom buttons and certain built-in NetSuite buttons. For a list of built-in buttons that support this method, see the list of buttons in the section Button IDs in the NetSuite Help Center.",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "setFieldValues(${1:values})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjForm. Sets the values of multiple fields on the current form. This API can be used in beforeLoad scripts to initialize field scripts on new records or non-stored fields. (See User Event beforeLoad Operations in the NetSuite Help Center for information on beforeLoad user event triggers.)",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "setScript(${1:script})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjForm. Sets the Client SuiteScript file used for this form",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "setTitle(${1:title})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjForm. Sets the title for this form",
+    "memberOf": "nlobjForm"
+  }, {
+    "type": "function",
+    "snippet": "isCancelled()",
+    "leftLabel": "Boolean",
+    "description": "Member Of: nlobjFuture. @returns {Boolean} - for merge duplicate records, will always returns false",
+    "memberOf": "nlobjFuture"
+  }, {
+    "type": "function",
+    "snippet": "isDone()",
+    "leftLabel": "Boolean",
+    "description": "Member Of: nlobjFuture. @returns {Boolean} - true if job has finished",
+    "memberOf": "nlobjFuture"
+  }, {
+    "type": "function",
+    "snippet": "createJobRequest()",
+    "leftLabel": "nlobjDuplicateJobRequest",
+    "description": "Member Of: nlobjJobManager. @returns {nlobjDuplicateJobRequest} nlobjDuplicateJobRequest",
+    "memberOf": "nlobjJobManager"
+  }, {
+    "type": "function",
+    "snippet": "getFuture()",
+    "leftLabel": "nlobjFuture",
+    "description": "Member Of: nlobjJobManager. Use to return a nlobjFuture object. Then use the methods on the nlobFuture object to check the status of the job. Note that a call to getFuture costs 5 governance units.",
+    "memberOf": "nlobjJobManager"
+  }, {
+    "type": "function",
+    "snippet": "submit(${1:nlobjDuplicateJobRequest})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjJobManager. Use to submit your job request. When submitting a �merge duplicates� job, the maximum size of your job can be 200 record.",
+    "memberOf": "nlobjJobManager"
+  }, {
+    "type": "function",
+    "snippet": "addButton(${1:name},${2:label},${3:script})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjList. Adds an nlobjButton object to the footer of the page",
+    "memberOf": "nlobjList"
+  }, {
+    "type": "function",
+    "snippet": "addColumn(${1:name},${2:type},${3:label},${4:align})",
+    "leftLabel": "nlobjColumn",
+    "description": "Member Of: nlobjList. Adds an nlobjColumn object to a list and returns a reference to this column",
+    "memberOf": "nlobjList"
+  }, {
+    "type": "function",
+    "snippet": "addEditColumn(${1:column},${2:showView},${3:showHrefCol})",
+    "leftLabel": "nlobjColumn",
+    "description": "Member Of: nlobjList. Adds an Edit or Edit/View column to Portlets (created with the nlobjPortlet object) and Suitelet and Portlet lists (created with the nlobjList object). Note that the Edit or Edit/View column will be added to the left of a previously existing column.",
+    "memberOf": "nlobjList"
+  }, {
+    "type": "function",
+    "snippet": "addPageLink(${1:type},${2:title},${3:url})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjList. Adds a navigation cross-link to the list page",
+    "memberOf": "nlobjList"
+  }, {
+    "type": "function",
+    "snippet": "addRow(${1:row})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjList. Adds a row (Array of name/value pairs or nlobjSearchResult) to this portlet.",
+    "memberOf": "nlobjList"
+  }, {
+    "type": "function",
+    "snippet": "addRows(${1:rows})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjList. Adds multiple rows (Array of nlobjSearchResult objects or name/value pair Arrays) to a portlet.",
+    "memberOf": "nlobjList"
+  }, {
+    "type": "function",
+    "snippet": "setScript(${1:script})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjList. Sets the Client SuiteScript used for this page.",
+    "memberOf": "nlobjList"
+  }, {
+    "type": "function",
+    "snippet": "setStyle(${1:style})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjList. Sets the display style for this list",
+    "memberOf": "nlobjList"
+  }, {
+    "type": "function",
+    "snippet": "setTitle(${1:title})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjList. Sets the title for this list",
+    "memberOf": "nlobjList"
+  }, {
+    "type": "function",
+    "snippet": "changeEmail(${1:currentPassword},${2:newEmail},${3:justThisAccount})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjLogin. Sets the logged-in user\u0027s email address to a new one.",
+    "memberOf": "nlobjLogin"
+  }, {
+    "type": "function",
+    "snippet": "changePassword(${1:currentPassword},${2:newPassword})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjLogin. Sets the logged-in user\u0027s password to a new one.",
+    "memberOf": "nlobjLogin"
+  }, {
+    "type": "function",
+    "snippet": "getBody()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjMergeResult. Use this method to get the body of the email distribution in string format.",
+    "memberOf": "nlobjMergeResult"
+  }, {
+    "type": "function",
+    "snippet": "getSubject()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjMergeResult. Use this method to get the subject of the email distribution in string format.",
+    "memberOf": "nlobjMergeResult"
+  }, {
+    "type": "function",
+    "snippet": "getAlias()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjPivotColumn. Get the column alias.",
+    "memberOf": "nlobjPivotColumn"
+  }, {
+    "type": "function",
+    "snippet": "getDependency(${1:alias})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjPivotColumn. Get the column dependency.",
+    "memberOf": "nlobjPivotColumn"
+  }, {
+    "type": "function",
+    "snippet": "getLabel()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjPivotColumn. Get the column label.",
+    "memberOf": "nlobjPivotColumn"
+  }, {
+    "type": "function",
+    "snippet": "getParent()",
+    "leftLabel": "nlobjPivotColumn",
+    "description": "Member Of: nlobjPivotColumn. Get the parent column.",
+    "memberOf": "nlobjPivotColumn"
+  }, {
+    "type": "function",
+    "snippet": "getSummaryLine()",
+    "leftLabel": "nlobjPivotColumn",
+    "description": "Member Of: nlobjPivotColumn. Get the summary line.",
+    "memberOf": "nlobjPivotColumn"
+  }, {
+    "type": "function",
+    "snippet": "getValue()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjPivotColumn. Get the value of the column.",
+    "memberOf": "nlobjPivotColumn"
+  }, {
+    "type": "function",
+    "snippet": "getVisibleChildren()",
+    "leftLabel": "nlobjPivotColumn[]",
+    "description": "Member Of: nlobjPivotColumn. Get any defined children columns.",
+    "memberOf": "nlobjPivotColumn"
+  }, {
+    "type": "function",
+    "snippet": "isHidden()",
+    "leftLabel": "Boolean",
+    "description": "Member Of: nlobjPivotColumn. Checks if the column is hidden.",
+    "memberOf": "nlobjPivotColumn"
+  }, {
+    "type": "function",
+    "snippet": "getAlias()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjPivotRow. Get the row alias.",
+    "memberOf": "nlobjPivotRow"
+  }, {
+    "type": "function",
+    "snippet": "getChildren()",
+    "leftLabel": "nlobjPivotRow[]",
+    "description": "Member Of: nlobjPivotRow. Get the children rows if there are any.",
+    "memberOf": "nlobjPivotRow"
+  }, {
+    "type": "function",
+    "snippet": "getDependency(${1:alias})",
+    "leftLabel": "Object",
+    "description": "Member Of: nlobjPivotRow. Get the dependant row of the given column alias.",
+    "memberOf": "nlobjPivotRow"
+  }, {
+    "type": "function",
+    "snippet": "getLabel()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjPivotRow. Get the row label.",
+    "memberOf": "nlobjPivotRow"
+  }, {
+    "type": "function",
+    "snippet": "getOpeningLine()",
+    "leftLabel": "nlobjPivotRow",
+    "description": "Member Of: nlobjPivotRow. Get the opening line from the report.",
+    "memberOf": "nlobjPivotRow"
+  }, {
+    "type": "function",
+    "snippet": "getParent()",
+    "leftLabel": "nlobjPivotRow",
+    "description": "Member Of: nlobjPivotRow. Get the summary line from the report.",
+    "memberOf": "nlobjPivotRow"
+  }, {
+    "type": "function",
+    "snippet": "getSummaryLine()",
+    "leftLabel": "nlobjPivotRow",
+    "description": "Member Of: nlobjPivotRow. Get the parent row if it exists.",
+    "memberOf": "nlobjPivotRow"
+  }, {
+    "type": "function",
+    "snippet": "getValue(${1:pivotColumn})",
+    "leftLabel": "Object",
+    "description": "Member Of: nlobjPivotRow. Get the value of the row/column combination.",
+    "memberOf": "nlobjPivotRow"
+  }, {
+    "type": "function",
+    "snippet": "isDetailLine()",
+    "leftLabel": "Boolean",
+    "description": "Member Of: nlobjPivotRow. Check if the row is a detail line.",
+    "memberOf": "nlobjPivotRow"
+  }, {
+    "type": "function",
+    "snippet": "getColumnHierarchy()",
+    "leftLabel": "nlobjPivotColumn",
+    "description": "Member Of: nlobjPivotTable. Get the column hierarchy.",
+    "memberOf": "nlobjPivotTable"
+  }, {
+    "type": "function",
+    "snippet": "getRowHierarchy()",
+    "leftLabel": "nlobjPivotRow",
+    "description": "Member Of: nlobjPivotTable. Get the row hierarchy.",
+    "memberOf": "nlobjPivotTable"
+  }, {
+    "type": "function",
+    "snippet": "getPivotTable()",
+    "leftLabel": "nlobjPivotTable",
+    "description": "Member Of: nlobjPivotTableHandle. Get the pivot table object from the report definition.",
+    "memberOf": "nlobjPivotTableHandle"
+  }, {
+    "type": "function",
+    "snippet": "isReady()",
+    "leftLabel": "Boolean",
+    "description": "Member Of: nlobjPivotTableHandle. Get if the execution of the report definition finished. Returns the completion status flag of the report definition execution.",
+    "memberOf": "nlobjPivotTableHandle"
+  }, {
+    "type": "function",
+    "snippet": "addColumn(${1:name},${2:type},${3:label},${4:just})",
+    "leftLabel": "nlobjColumn",
+    "description": "Member Of: nlobjPortlet. Adds an nlobjColumn object to a list and returns a reference to this column. Note that this API is only available if the portlet type is a \u003cstrong\u003eLIST\u003c/strong\u003e type. (In the NetSuite Help Center, see Portlet Scripts for portlet type definitions. This section also shows how to define your portlet type on the portlet Script record page in the NetSuite UI.)",
+    "memberOf": "nlobjPortlet"
+  }, {
+    "type": "function",
+    "snippet": "addEditColumn(${1:column},${2:showView},${3:showHrefCol})",
+    "leftLabel": "nlobjColumn",
+    "description": "Member Of: nlobjPortlet. Adds an Edit or Edit|View column to \u003cstrong\u003eLIST\u003c/strong\u003e portlets (see figure). This method can also be used with nlobjList when creating Suitelet lists and portlet lists. Note that the Edit or Edit|View column will be added to the left of a previously existing column.",
+    "memberOf": "nlobjPortlet"
+  }, {
+    "type": "function",
+    "snippet": "addField(${1:name},${2:type},${3:label},${4:source})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjPortlet. Adds an nlobjField object to a portlet and returns a reference to it.",
+    "memberOf": "nlobjPortlet"
+  }, {
+    "type": "function",
+    "snippet": "addLine(${1:text},${2:url},${3:indent})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjPortlet. Adds a line (containing text or simple HTML) with optional indenting and URL to a \u003cstrong\u003eLINKS\u003c/strong\u003e portlet.",
+    "memberOf": "nlobjPortlet"
+  }, {
+    "type": "function",
+    "snippet": "addRow(${1:row})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjPortlet. Adds a row (nlobjSearchResult) or Array of name/value pairs) to a LIST portlet.",
+    "memberOf": "nlobjPortlet"
+  }, {
+    "type": "function",
+    "snippet": "addRows(${1:rows})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjPortlet. Adds multiple rows (Array of nlobjSearchResult objects or name/value pair Arrays) to a \u003cstrong\u003eLIST\u003c/strong\u003e portlet.",
+    "memberOf": "nlobjPortlet"
+  }, {
+    "type": "function",
+    "snippet": "setHtml(${1:html})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjPortlet. Sets the entire content of an HTML portlet (content will be placed inside \u003cTD\u003e...\u003c/TD\u003e tags).",
+    "memberOf": "nlobjPortlet"
+  }, {
+    "type": "function",
+    "snippet": "setRefreshInterval(${1:n})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjPortlet. Sets the regular interval when a FORM portlet automatically refreshes itself.",
+    "memberOf": "nlobjPortlet"
+  }, {
+    "type": "function",
+    "snippet": "setScript(${1:scriptid})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjPortlet. Sets the client-side script for a FORM portlet. For example, you can use this method to call a script to implement client-side validation, dynamically calculate field totals, and change data based on the value of another field. Note that you can only set one script. Setting another script implicitly removes the previous script.",
+    "memberOf": "nlobjPortlet"
+  }, {
+    "type": "function",
+    "snippet": "setSubmitButton(${1:url},${2:label},${3:target})",
+    "leftLabel": "nlobjButton",
+    "description": "Member Of: nlobjPortlet. Adds a SUBMIT button with an optional custom label to this FORM portlet.",
+    "memberOf": "nlobjPortlet"
+  }, {
+    "type": "function",
+    "snippet": "setTitle(${1:title})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjPortlet. Sets the portlet title",
+    "memberOf": "nlobjPortlet"
+  }, {
+    "type": "function",
+    "snippet": "commitLineItem(${1:group},${2:ignoreRecalc})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Use this method to commit the current line in a sublist.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "createCurrentLineItemSubrecord(${1:sublist},${2:fldname})",
+    "leftLabel": "nlobjSubrecord",
+    "description": "Member Of: nlobjRecord. Returns a nlobjSubrecord object. Use this API to create a subrecord from a \u003cstrong\u003esublist field\u003c/strong\u003e on the parent record.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "createSubrecord(${1:fldname})",
+    "leftLabel": "nlobjSubrecord",
+    "description": "Member Of: nlobjRecord. Returns a nlobjSubrecord object. Use this API to create a subrecord from a \u003cstrong\u003ebody field\u003c/strong\u003e on the parent record.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "editCurrentLineItemSubrecord(${1:sublist},${2:fldname})",
+    "leftLabel": "nlobjSubrecord",
+    "description": "Member Of: nlobjRecord. Returns a nlobjSubrecord object. Use this API to edit a subrecord from a \u003cstrong\u003esublist\u003c/strong\u003e field on the parent record.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "editSubrecord(${1:fldname})",
+    "leftLabel": "nlobjSubrecord",
+    "description": "Member Of: nlobjRecord. Returns a nlobjSubrecord object. Use this API to edit a subrecord from a \u003cstrong\u003ebody\u003c/strong\u003e field on the parent record.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "findLineItemMatrixValue(${1:group},${2:fldnam},${3:column},${4:val})",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjRecord. Use this method to return the line number of a particular price in a given column. If the value is present on multiple lines, it will return the line item of the \u003cstrong\u003efirst\u003c/strong\u003e line that contains the value.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "findLineItemValue(${1:group},${2:fldnam},${3:value})",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjRecord. Use this API to return the line number for the first occurrence of a field value in a sublist column. This API can be used on any sublist type that supports SuiteScript (editor, inline editor, and list sublists).",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getAllFields()",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjRecord. Returns a normal keyed array of all the fields on a record. Note that the number of fields returned will differ when you call getAllFields() on the edit of a record vs. on the xedit of a record. For details, see these topics (issue 117539) :",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getAllLineItemFields(${1:group})",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjRecord. Returns an array of all the field names of a sublist on this record",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getCurrentLineItemDateTimeValue(${1:type},${2:fieldId},${3:timeZone})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRecord. Returns the value of a datetime field on the currently selected line of a sublist. If timeZone is passed in, the datetime value is converted to that time zone and then returned. If timeZone is not passed in, the datetime value is returned in the default time zone.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getCurrentLineItemMatrixValue(${1:group},${2:fldnam},${3:column})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRecord. Use this API to get the value of the currently selected matrix field. This API should be used on matrix sublists only.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getCurrentLineItemValue(${1:type},${2:fldnam})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRecord. Returns the value of a sublist field on the currently selected line",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getCurrentLineItemValues(${1:type},${2:fldnam})",
+    "leftLabel": "array",
+    "description": "Member Of: nlobjRecord. Returns the values of a multiselect sublist field on the currently selected line. One example of a multiselect sublist field is the Serial Numbers field on the Items sublist.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getDateTimeValue(${1:fieldId},${2:timeZone})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRecord. Returns the value of a datetime field. If timeZone is passed in, the datetime value is converted to that time zone and then returned. If timeZone is not passed in, the datetime value is returned in the default time zone.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getField(${1:fldnam})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjRecord. Returns field metadata for a field. This method is only supported with server-side scripts.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getFieldText(${1:name})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRecord. Returns the UI display value for a select field. This method is only supported with server-side scripts. This method is supported on select fields only.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getFieldTexts(${1:name})",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjRecord. Returns the UI display values for a multi-select field. This method is only supported with server-side scripts. This method is supported on multi-select fields only.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getFieldValue(${1:name})",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjRecord. Returns the value (internal ID) of a field.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getFieldValues(${1:name})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRecord. Returns the value (field ID) or values (array of field IDs) of a multi-select field.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getId()",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjRecord. Use this method to get the internal ID of a record or NULL for new records.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getLineItemCount(${1:group})",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjRecord. Returns the number of lines on a sublist",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getLineItemDateTimeValue(${1:type},${2:fieldId},${3:lineNum},${4:timeZone})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRecord. Returns the value of a datetime field on a sublist. If timeZone is passed in, the datetime value is converted to that time zone and then returned. If timeZone is not passed in, the datetime value is returned in the default time zone.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getLineItemField(${1:group},${2:fldnam},${3:linenum})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjRecord. Returns field metadata for a line item (sublist) field. This method is only supported with server-side scripts.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getLineItemMatrixField(${1:group},${2:fldnam},${3:linenum},${4:column})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjRecord. Use this API to obtain metadata for a field that appears in a matrix sublist.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getLineItemMatrixValue(${1:group},${2:fldnam},${3:lineum},${4:column})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRecord. Use this API to get the value of a matrix field that appears on a specific line in a specific column. This API can be used only in the context of a matrix sublist.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getLineItemText(${1:group},${2:fldnam},${3:linenum})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRecord. Returns the display name of a select field (based on its current selection) in a sublist. This method is only supported with server-side scripts.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getLineItemValue(${1:group},${2:name},${3:linenum})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRecord. Returns the value of a sublist line item field.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getLineItemValues(${1:type},${2:fldnam},${3:linenum})",
+    "leftLabel": "array",
+    "description": "Member Of: nlobjRecord. Returns the values of a multiselect sublist field on a selected line. One example of a multiselect sublist field is the Serial Numbers field on the Items sublist.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getMatrixCount(${1:group},${2:fldnam})",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjRecord. Use this API in a matrix sublist to get the number of columns for a specific matrix field.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getMatrixField(${1:group},${2:fldname},${3:column})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjRecord. Use this API to get field metadata for a matrix �header� field in a matrix sublist. This method is only supported with server-side scripts.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getMatrixValue(${1:group},${2:fldnam},${3:column})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRecord. Use this API to get the value of a matrix �header� field in a matrix sublist.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getRecordType()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRecord. Returns the record type (for example assembly unbuild would be returned for the Assembly Unbuild record type; salesorder would be returned for the Sales Order record type).",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "insertLineItem(${1:group},${2:linenum},${3:ignoreRecalc})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Inserts a new line into a sublist. This function is only supported for edit sublists (inlineeditor, editor). Note, however, this API will work on list sublists that have been added via the UI object nlobjSubList",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "removeCurrentLineItemSubrecord(${1:sublist},${2:fldname})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Returns a nlobjSubrecord object. Use this API to remove a subrecord from a \u003cstrong\u003esublist\u003c/strong\u003e field on the parent record.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "removeLineItem(${1:group},${2:linenum},${3:ignoreRecalc})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Use this method to remove an existing line from a sublist.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "removeSubrecord(${1:fldname})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Returns a nlobjSubrecord object. Use this API to remove a subrecord from a \u003cstrong\u003ebody\u003c/strong\u003e field on the parent record.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "selectLineItem(${1:group},${2:linenum})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Use this method to select an existing line in a sublist.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "selectNewLineItem(${1:group})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Use this method to insert and select a new line in a sublist.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "setCurrentLineItemDateTimeValue(${1:type},${2:fieldId},${3:dateTime},${4:timeZone})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Sets the value of a datetime field on the currently selected line of a sublist. If timeZone is passed in, the datetime value is converted to that time zone and then set. If timeZone is not passed in, the datetime value is set in the default time zone.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "setCurrentLineItemMatrixValue(${1:group},${2:fldnam},${3:column},${4:value})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Use this API to set the value of a given matrix sublist field. Also note that it should be used on matrix sublists only.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "setCurrentLineItemValue(${1:group},${2:name},${3:value})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Use this method to set the value of a sublist line item field.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "setDateTimeValue(${1:fieldId},${2:dateTime},${3:timeZone})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Sets the value of a datetime field. If timeZone is passed in, the datetime value is converted to that time zone and then set. If timeZone is not passed in, the datetime value is set in the default time zone.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "setFieldText(${1:name},${2:text})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Sets the value of a select field using its corresponding display value. This method is only supported with server-side scripts.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "setFieldTexts(${1:name},${2:text})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Sets the values for a multiselect field from their display values. This method is only supported with server-side scripts.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "setFieldValue(${1:name},${2:value})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Sets the value of a field",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "setFieldValues(${1:name},${2:value})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Sets the value of a multi-select field",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "setLineItemDateTimeValue(${1:type},${2:fieldId},${3:lineNum},${4:dateTime},${5:timeZone})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Sets the value of a datetime field on a sublist. If timeZone is passed in, the datetime value is converted to that time zone and then set. If timeZone is not passed in, the datetime value is set in the default time zone.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "setLineItemValue(${1:group},${2:name},${3:linenum},${4:value})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. Sets the value of a sublist line item.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "setMatrixValue(${1:group},${2:fldnam},${3:column},${4:value})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjRecord. This API is used to set a header field in a matrix sublist. Also note that this API should be used on matrix sublists only.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "viewCurrentLineItemSubrecord(${1:sublist},${2:fldname})",
+    "leftLabel": "nlobjSubrecord",
+    "description": "Member Of: nlobjRecord. Returns a nlobjSubrecord object. Use this API to view a subrecord from a \u003cstrong\u003esublist\u003c/strong\u003e field on the parent record. Calling this API analogous to doing a �get� on a subrecord, however, the nlobjSubrecord object returned is in \u003cstrong\u003eread-only\u003c/strong\u003e mode. Therefore, an error is thrown if you attempt to edit a subrecord returned by this API.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "viewLineItemSubrecord(${1:sublist},${2:fldname},${3:linenum})",
+    "leftLabel": "nlobjSubrecord",
+    "description": "Member Of: nlobjRecord. Returns a nlobjSubrecord object. Use this API to view a subrecord from a \u003cstrong\u003esublist\u003c/strong\u003e field on the parent record. Calling this API analogous to doing a �get� on a subrecord, however, the nlobjSubrecord object returned is in read-only mode. Therefore, an error is thrown if you attempt to edit a subrecord returned by this function.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "viewSubrecord(${1:fldname})",
+    "leftLabel": "nlobjSubrecord",
+    "description": "Member Of: nlobjRecord. Returns a nlobjSubrecord object. Use this API to view a subrecord from a \u003cstrong\u003ebody\u003c/strong\u003e field on the parent record. Calling this API analogous to doing a �get� on a subrecord, however, the nlobjSubrecord object returned is in read-only mode. Therefore, an error is thrown if you attempt to edit a subrecord returned by this function.",
+    "memberOf": "nlobjRecord"
+  }, {
+    "type": "function",
+    "snippet": "getFormula()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportColumn. Get the formula for this column",
+    "memberOf": "nlobjReportColumn"
+  }, {
+    "type": "function",
+    "snippet": "getParent()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportColumn. Get the parent reference of this column.",
+    "memberOf": "nlobjReportColumn"
+  }, {
+    "type": "function",
+    "snippet": "isMeasure()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportColumn. Returns the measure flag",
+    "memberOf": "nlobjReportColumn"
+  }, {
+    "type": "function",
+    "snippet": "getChildren()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportColumnHierarchy. Get the children reference of this column hierarchy.",
+    "memberOf": "nlobjReportColumnHierarchy"
+  }, {
+    "type": "function",
+    "snippet": "getParent()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportColumnHierarchy. Get the parent reference of this column hierarchy.",
+    "memberOf": "nlobjReportColumnHierarchy"
+  }, {
+    "type": "function",
+    "snippet": "addColumn(${1:alias},${2:isMeasure},${3:label},${4:parent},${5:format},${6:formula})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportDefinition. Add a column to the report definition.",
+    "memberOf": "nlobjReportDefinition"
+  }, {
+    "type": "function",
+    "snippet": "addColumnHierarchy(${1:alias},${2:label},${3:parent},${4:format})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportDefinition. Add a column hierarchy to the report definition.",
+    "memberOf": "nlobjReportDefinition"
+  }, {
+    "type": "function",
+    "snippet": "addFileDataSource(${1:media_id},${2:metaDataFunction},${3:rowFunction})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportDefinition. Adds the contents of a file as a data source to the report definition.",
+    "memberOf": "nlobjReportDefinition"
+  }, {
+    "type": "function",
+    "snippet": "addJSONDataSource(${1:jsondata},${2:map})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportDefinition. Adds a JSON data source to the report definition.",
+    "memberOf": "nlobjReportDefinition"
+  }, {
+    "type": "function",
+    "snippet": "addRowHierarchy(${1:alias},${2:label},${3:format})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportDefinition. Add a row hierarchy to the report definition.",
+    "memberOf": "nlobjReportDefinition"
+  }, {
+    "type": "function",
+    "snippet": "addSearchDatasource(${1:searchType},${2:id},${3:filters},${4:columns},${5:map})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportDefinition. Attaches a search as a data source to the report definition.",
+    "memberOf": "nlobjReportDefinition"
+  }, {
+    "type": "function",
+    "snippet": "addURLDataSource(${1:url},${2:metadataFunction},${3:rowFunction})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportDefinition. Adds a data source from an external URL.",
+    "memberOf": "nlobjReportDefinition"
+  }, {
+    "type": "function",
+    "snippet": "addXMLDataSource(${1:media_id},${2:url},${3:metadata_key},${4:metadataFunction},${5:rowdata_key},${6:rowFunction})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportDefinition. Adds an XML feed as a data source to the report definition, either from a file in the file cabinet, or from an external URL.",
+    "memberOf": "nlobjReportDefinition"
+  }, {
+    "type": "function",
+    "snippet": "executeReport(${1:form})",
+    "leftLabel": "nlobjPivotTableHandle",
+    "description": "Member Of: nlobjReportDefinition. Creates the form for rendering from the report definition.",
+    "memberOf": "nlobjReportDefinition"
+  }, {
+    "type": "function",
+    "snippet": "setTitle(${1:title})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportDefinition. Sets the title of the report definition.",
+    "memberOf": "nlobjReportDefinition"
+  }, {
+    "type": "function",
+    "snippet": "getChild()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportRowHierarchy. Get the child reference of this row hierarchy.",
+    "memberOf": "nlobjReportRowHierarchy"
+  }, {
+    "type": "function",
+    "snippet": "getParent()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjReportRowHierarchy. Get the parent reference of this row hierarchy.",
+    "memberOf": "nlobjReportRowHierarchy"
+  }, {
+    "type": "function",
+    "snippet": "getAllHeaders()",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjRequest. Returns an Object containing all the request headers and their values.",
+    "memberOf": "nlobjRequest"
+  }, {
+    "type": "function",
+    "snippet": "getAllParameters()",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjRequest. Returns an Object containing all the request parameters and their values",
+    "memberOf": "nlobjRequest"
+  }, {
+    "type": "function",
+    "snippet": "getBody()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRequest. Returns the body of the POST request",
+    "memberOf": "nlobjRequest"
+  }, {
+    "type": "function",
+    "snippet": "getFile(${1:id})",
+    "leftLabel": "nlobjFile",
+    "description": "Member Of: nlobjRequest. Returns a file reference (nlobjFile object) added to a Suitelet page with the nlobjForm.addField(name, type, label, sourceOrRadio, tab) method (where \u0027file\u0027 is passed in as the type argument). The getFile method can return a reference to a file up to, but not including, 10MB in size.",
+    "memberOf": "nlobjRequest"
+  }, {
+    "type": "function",
+    "snippet": "getHeader(${1:name})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRequest. Returns the value of a header in the request",
+    "memberOf": "nlobjRequest"
+  }, {
+    "type": "function",
+    "snippet": "getLineItemCount(${1:group})",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjRequest. Returns the number of lines in a sublist",
+    "memberOf": "nlobjRequest"
+  }, {
+    "type": "function",
+    "snippet": "getLineItemValue(${1:group},${2:name},${3:line})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRequest. Returns the value of a sublist line item.",
+    "memberOf": "nlobjRequest"
+  }, {
+    "type": "function",
+    "snippet": "getMethod()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRequest. Returns the METHOD of the request.",
+    "memberOf": "nlobjRequest"
+  }, {
+    "type": "function",
+    "snippet": "getParameter(${1:name})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRequest. Returns the value of the request parameter",
+    "memberOf": "nlobjRequest"
+  }, {
+    "type": "function",
+    "snippet": "getParameterValues(${1:name})",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjRequest. Returns the values of a request parameter as an Array",
+    "memberOf": "nlobjRequest"
+  }, {
+    "type": "function",
+    "snippet": "getURL()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjRequest. Returns the full URL of the request",
+    "memberOf": "nlobjRequest"
+  }, {
+    "type": "function",
+    "snippet": "addHeader(${1:name},${2:value})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjResponse. Adds a header to the response. If this header has already been set, this will add a new header to the response. Note that all user-defined headers must be prefixed with \u003cstrong\u003eCustom-Header\u003c/strong\u003e otherwise an SSS_INVALID_ARG error will be thrown ()",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "getAllHeaders()",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjResponse. Returns an Array containing all the headers returned in the response. Only available in the return value of a call to nlapiRequestURL(url, postdata, headers, callback, httpMethod).",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "getBody()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjResponse. Returns the body returned by the server. Only available in the return value of a call to nlapiRequestURL(url, postdata, headers, callback, httpMethod).",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "getCode()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjResponse. Returns the response code returned by the server. Only available in the return value of a call to nlapiRequestURL(url, postdata, headers, callback, httpMethod).",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "getError()",
+    "leftLabel": "nlobjError",
+    "description": "Member Of: nlobjResponse. Returns the nlobjError thrown during request. Only available in the return value of call to nlapiRequestURL in Client SuiteScript.",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "getHeader(${1:name})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjResponse. Returns the value for a header returned in the response. Only available in the return value of a call to nlapiRequestURL(url, postdata, headers, callback, httpMethod).",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "getHeaders(${1:name})",
+    "leftLabel": "Array",
+    "description": "Member Of: nlobjResponse. Returns an Array containing all the values for a header returned in the response. This is only available in the return value of a call to nlapiRequestURL.",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "renderPDF(${1:xmlString})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjResponse. Generates, and renders, a PDF directly to a response. Use renderPDF to generate PDFs without first importing a file to the file cabinet. This method is useful if your script does not have NetSuite file cabinet permissions.",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "sendRedirect(${1:type},${2:identifier},${3:id},${4:editmode},${5:parameters})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjResponse. Sets the redirect URL by resolving to a NetSuite resource. Note that all parameters must be prefixed with \u003cstrong\u003ecustparam\u003c/strong\u003e otherwise an SSS_INVALID_ARG error will be thrown.",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "setCDNCacheable(${1:type})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjResponse. Sets CDN caching for a shorter period of time or a longer period of time. There is no ability to invalidate individual assets, so SSP Application can set its TTL (Time To Live) in CDN and fall  into one of four categories:",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "setContentType(${1:type},${2:name},${3:disposition})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjResponse. Sets the content type for the custom responses (and an optional file name for binary output). This API is available in Suitelet scripts only.",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "setEncoding(${1:encodingType})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjResponse. Allows developers to set character encoding on nlobjResponse content. The default encoding type is UTF-8. Available encoding types are:",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "setHeader(${1:name},${2:value})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjResponse. Sets the value of a response header. Note that all user-defined headers must be prefixed with \u003cstrong\u003eCustom-Header\u003c/strong\u003e otherwise an SSS_INVALID_ARG or SSS_INVALID_HEADER error will be thrown.",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "write(${1:output})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjResponse. Write information (text/xml/html) to the response",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "writeLine(${1:output})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjResponse. Write line information (text/xml/html) to the response",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "writePage(${1:pageobject})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjResponse. Generates a page using a page element object (nlobjForm or nlobjList)",
+    "memberOf": "nlobjResponse"
+  }, {
+    "type": "function",
+    "snippet": "addColumn(${1:column})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSearch. Adds a single return column to the search. Note that existing columns on the search are not changed.",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "addColumns(${1:columns})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSearch. Adds multiple return columns to the search. Note that existing columns on the search are not changed.",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "addFilter(${1:filter})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSearch. Adds a single search filter. Note that existing filters on the search are not changed.",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "addFilters(${1:filters})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSearch. Adds a search filter list. Note that existing filters on the search are not changed.",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "deleteSearch()",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSearch. Deletes a given saved search that was created through scripting or through the UI.",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "getColumns()",
+    "leftLabel": "nlobjSearchColumn[]",
+    "description": "Member Of: nlobjSearch. Gets the search return columns for the search.",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "getFilterExpression()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjSearch. Gets the filter expression for the search.",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "getFilters()",
+    "leftLabel": "nlobjSearchFilter[]",
+    "description": "Member Of: nlobjSearch. Gets the filters for the search.",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "getId()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearch. Gets the internal ID of the search. The internal ID is available only when the search is either loaded using nlapiLoadSearch(type, id) or has been saved using nlobjSearch.saveSearch(title, scriptId).",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "getIsPublic()",
+    "leftLabel": "Boolean",
+    "description": "Member Of: nlobjSearch. Gets whether the nlobjSearch has been set as public search.",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "getScriptId()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearch. Gets the script ID of the search. The script ID is available only when the search is either loaded using nlapiLoadSearch(type, id) or has been saved using nlobjSearch.saveSearch(title, scriptId).",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "getSearchType()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearch. Returns the record type that the search was based on. This method is helpful when you have the internal ID of the search, but do not know the record type the search was based on.",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "runSearch()",
+    "leftLabel": "nlobjSearchResultSet",
+    "description": "Member Of: nlobjSearch. Runs an ad-hoc search, returning the results. Be aware that calling this method does NOT save the search. Using this method in conjunction with nlapiCreateSearch(type, filters, columns) allows you to create and run ad-hoc searches that are never saved to the database, much like nlapiSearchRecord.",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "saveSearch(${1:title},${2:scriptId})",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjSearch. Saves the search created by nlapiCreateSearch(type, filters, columns).",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "setColumns(${1:columns})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSearch. Sets the return columns for this search, overwriting any prior columns. If null is passed in it is treated as if it were an empty array and removes any existing columns on the search.",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "setFilterExpression(${1:filterExpression})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSearch. Sets the search filter expression, overwriting any prior filters. If null is passed in, it is treated as if it was an empty array and removes any existing filters on this search.",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "setFilters(${1:filters})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSearch. Sets the filters for this search, overwriting any prior filters. If null is passed in it is treated as if it were an empty array and removes any existing filters on this search.",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "setIsPublic(${1:type})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSearch. Sets whether the search is public or private. By default, all searches created through nlapiCreateSearch(type, filters, columns) are private.",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "setRedirectURLToSearch()",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSearch. Acts like nlapiSetRedirectURL(type, identifier, id, editmode, parameters) but redirects end users to a populated search definition page. You can use this method with any kind of search that is held in the nlobjSearch object. This could be:",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "setRedirectURLToSearchResults()",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSearch. Acts like nlapiSetRedirectURL(type, identifier, id, editmode, parameters) but redirects end users to a search results page. You can use this method with any kind of search that is held in the nlobjSearch object. This could be:",
+    "memberOf": "nlobjSearch"
+  }, {
+    "type": "function",
+    "snippet": "getFormula()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearchColumn. @returns {String} Returns the formula used for this column as a string",
+    "memberOf": "nlobjSearchColumn"
+  }, {
+    "type": "function",
+    "snippet": "getFunction()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearchColumn. @returns {String} The function used in this search column as a string",
+    "memberOf": "nlobjSearchColumn"
+  }, {
+    "type": "function",
+    "snippet": "getJoin()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearchColumn. Returns join id for this search column",
+    "memberOf": "nlobjSearchColumn"
+  }, {
+    "type": "function",
+    "snippet": "getLabel()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearchColumn. Returns the label used for the search column. Note that ONLY custom labels can be returned using this method.",
+    "memberOf": "nlobjSearchColumn"
+  }, {
+    "type": "function",
+    "snippet": "getName()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearchColumn. @returns {String} The name of the search column as a string",
+    "memberOf": "nlobjSearchColumn"
+  }, {
+    "type": "function",
+    "snippet": "getSort()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearchColumn. Returns the sort direction for this column",
+    "memberOf": "nlobjSearchColumn"
+  }, {
+    "type": "function",
+    "snippet": "getSummary()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearchColumn. Returns the summary type (avg, group, sum, count) for this search column. In the NetSuite Help Center, see Search Summary Types for a list of summary types.",
+    "memberOf": "nlobjSearchColumn"
+  }, {
+    "type": "function",
+    "snippet": "setFormula(${1:formula})",
+    "leftLabel": "nlobjSearchColumn",
+    "description": "Member Of: nlobjSearchColumn. Set the formula used for this column. Name of the column can either be formulatext, formulanumeric, formuladatetime, formulapercent, or formulacurrency.",
+    "memberOf": "nlobjSearchColumn"
+  }, {
+    "type": "function",
+    "snippet": "setFunction(${1:functionid})",
+    "leftLabel": "nlobjSearchColumn",
+    "description": "Member Of: nlobjSearchColumn. Sets the special function used for this column.",
+    "memberOf": "nlobjSearchColumn"
+  }, {
+    "type": "function",
+    "snippet": "setLabel(${1:label})",
+    "leftLabel": "nlobjSearchColumn",
+    "description": "Member Of: nlobjSearchColumn. Set the label used for this column.",
+    "memberOf": "nlobjSearchColumn"
+  }, {
+    "type": "function",
+    "snippet": "setSort(${1:order})",
+    "leftLabel": "nlobjSearchColumn",
+    "description": "Member Of: nlobjSearchColumn. Returns nlobjSearchColumn sorted in either ascending or descending order.",
+    "memberOf": "nlobjSearchColumn"
+  }, {
+    "type": "function",
+    "snippet": "setWhenOrderedBy(${1:name},${2:join})",
+    "leftLabel": "nlobjSearchColumn",
+    "description": "Member Of: nlobjSearchColumn. Returns the search column for which the minimal or maximal value should be found when returning the nlobjSearchColumn value.",
+    "memberOf": "nlobjSearchColumn"
+  }, {
+    "type": "function",
+    "snippet": "getFormula()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjSearchFilter. Returns the formula used for this filter",
+    "memberOf": "nlobjSearchFilter"
+  }, {
+    "type": "function",
+    "snippet": "getJoin()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearchFilter. Returns the join id for this search filter",
+    "memberOf": "nlobjSearchFilter"
+  }, {
+    "type": "function",
+    "snippet": "getName()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearchFilter. Returns the name for this search filter",
+    "memberOf": "nlobjSearchFilter"
+  }, {
+    "type": "function",
+    "snippet": "getOperator()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearchFilter. Returns the filter operator that was used",
+    "memberOf": "nlobjSearchFilter"
+  }, {
+    "type": "function",
+    "snippet": "getSummaryType()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjSearchFilter. Returns the summary type used for this filter",
+    "memberOf": "nlobjSearchFilter"
+  }, {
+    "type": "function",
+    "snippet": "setFormula(${1:formula})",
+    "leftLabel": "nlobjSearchFilter",
+    "description": "Member Of: nlobjSearchFilter. Sets the formula used for this filter. Name of the filter can either be formulatext, formulanumeric, formuladatetime, formulapercent, or formulacurrency.",
+    "memberOf": "nlobjSearchFilter"
+  }, {
+    "type": "function",
+    "snippet": "setLeftParens(${1:count})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjSearchFilter. Adds one or more left parentheses to the start of the filter. Enables the use of logical expressions between search filters.",
+    "memberOf": "nlobjSearchFilter"
+  }, {
+    "type": "function",
+    "snippet": "setNot(${1:value})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjSearchFilter. Sets the filter to exclude this criteria from the results.",
+    "memberOf": "nlobjSearchFilter"
+  }, {
+    "type": "function",
+    "snippet": "setOr(${1:value})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjSearchFilter. Connects this filter to the following filter with OR logic. The default relationship between filters otherwise is logical AND.",
+    "memberOf": "nlobjSearchFilter"
+  }, {
+    "type": "function",
+    "snippet": "setRightParens(${1:count})",
+    "leftLabel": "",
+    "description": "Member Of: nlobjSearchFilter. Adds one or more right parentheses to the end of the filter. Enables the use of logical expressions between search filters.",
+    "memberOf": "nlobjSearchFilter"
+  }, {
+    "type": "function",
+    "snippet": "setSummaryType(${1:type})",
+    "leftLabel": "nlobjSearchFilter",
+    "description": "Member Of: nlobjSearchFilter. Sets the summary type used for this filter. Filter name must correspond to a search column if it is to be used as a summary filter.",
+    "memberOf": "nlobjSearchFilter"
+  }, {
+    "type": "function",
+    "snippet": "getAllColumns()",
+    "leftLabel": "nlobjSearchColumn[]",
+    "description": "Member Of: nlobjSearchResult. Returns an array of nlobjSearchColumn objects containing all the columns returned in a specified search",
+    "memberOf": "nlobjSearchResult"
+  }, {
+    "type": "function",
+    "snippet": "getId()",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjSearchResult. Returns the internal ID for the returned record",
+    "memberOf": "nlobjSearchResult"
+  }, {
+    "type": "function",
+    "snippet": "getRecordType()",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearchResult. Returns the record type for the returned record",
+    "memberOf": "nlobjSearchResult"
+  }, {
+    "type": "function",
+    "snippet": "getText(${1:name},${2:join},${3:summary})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearchResult. Returns the UI display name (ie,. the text value) for this nlobjSearchColumn. Note that this method is supported on \u003cstrong\u003enon-stored\u003c/strong\u003e select, image, document fields only.",
+    "memberOf": "nlobjSearchResult"
+  }, {
+    "type": "function",
+    "snippet": "getValue(${1:column})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSearchResult. Can be used on formula fields and non-formula (standard) fields to get the value of a specified search return column",
+    "memberOf": "nlobjSearchResult"
+  }, {
+    "type": "function",
+    "snippet": "forEachResult(${1:callback})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSearchResultSet. Calls the developer-defined callback function for every result in this set. There is a limit of 4000 rows in the result set returned in forEachResult().",
+    "memberOf": "nlobjSearchResultSet"
+  }, {
+    "type": "function",
+    "snippet": "getColumns()",
+    "leftLabel": "nlobjSearchColumn[]",
+    "description": "Member Of: nlobjSearchResultSet. Returns a list of nlobjSearchColumn objects for this result set. This list contains one nlobjSearchColumn object for each result column in the nlobjSearchResult objects returned by this search.",
+    "memberOf": "nlobjSearchResultSet"
+  }, {
+    "type": "function",
+    "snippet": "getResults(${1:start},${2:end})",
+    "leftLabel": "nlobjSearchResult[]",
+    "description": "Member Of: nlobjSearchResultSet. Retrieve a slice of the search result. The start parameter is the inclusive index of the first result to return. The end parameter is the exclusive index of the last result to return. For example, getResults(0, 10) retrieves 10 search results, at index 0 through index 9. Unlimited rows in the result are supported, however you can only return 1,000 at at time based on the index values.",
+    "memberOf": "nlobjSearchResultSet"
+  }, {
+    "type": "function",
+    "snippet": "getId()",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjSelectOption. Use this method to get the internal ID of a select option. For example, on a select field called \u003cstrong\u003eColors\u003c/strong\u003e, a call to this method might return 1, 2, 3 (to represent the internal IDs for options that appear in a drop-down field as Red, White, Blue).",
+    "memberOf": "nlobjSelectOption"
+  }, {
+    "type": "function",
+    "snippet": "getText()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjSelectOption. Use this method to get the UI display label of a select option. For example, on a select field called \u003cstrong\u003eColors\u003c/strong\u003e, a call to this method might return Red, White, Blue.",
+    "memberOf": "nlobjSelectOption"
+  }, {
+    "type": "function",
+    "snippet": "addButton(${1:name},${2:label},${3:script})",
+    "leftLabel": "nlobjButton",
+    "description": "Member Of: nlobjSubList. Adds a button to a sublist",
+    "memberOf": "nlobjSubList"
+  }, {
+    "type": "function",
+    "snippet": "addField(${1:name},${2:type},${3:label},${4:source})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjSubList. Adds a field (column) to a sublist",
+    "memberOf": "nlobjSubList"
+  }, {
+    "type": "function",
+    "snippet": "addMarkAllButtons()",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSubList. Adds a \"Mark All\" and an \"Unmark All\" button to a sublist. Only valid on scriptable sublists of type \u003cstrong\u003eLIST\u003c/strong\u003e. Requires a check box column to exist on the form, which will be automatically checked/unchecked depending on what the end user does.",
+    "memberOf": "nlobjSubList"
+  }, {
+    "type": "function",
+    "snippet": "addRefreshButton()",
+    "leftLabel": "nlobjButton",
+    "description": "Member Of: nlobjSubList. Adds a Refresh button to sublists of type list or staticlist to auto-refresh the sublist if its contents are dynamic. In this case, the sublist is refreshed without having to reload the contents of the entire page.",
+    "memberOf": "nlobjSubList"
+  }, {
+    "type": "function",
+    "snippet": "getLineItemCount()",
+    "leftLabel": "Number",
+    "description": "Member Of: nlobjSubList. Returns the number of lines on a sublist",
+    "memberOf": "nlobjSubList"
+  }, {
+    "type": "function",
+    "snippet": "getLineItemValue(${1:group},${2:fldnam},${3:linenum})",
+    "leftLabel": "String",
+    "description": "Member Of: nlobjSubList. Returns string value of a sublist field. Note that you cannot set default line item values when the line is not in edit mode.",
+    "memberOf": "nlobjSubList"
+  }, {
+    "type": "function",
+    "snippet": "setAmountField(${1:field})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSubList. Designates a particular column as the totalling column, which is used to calculate and display a running total for the sublist",
+    "memberOf": "nlobjSubList"
+  }, {
+    "type": "function",
+    "snippet": "setDisplayType(${1:type})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSubList. Sets the display style for this sublist. This method is only supported on scripted or staticlist sublists via the UI Object API.",
+    "memberOf": "nlobjSubList"
+  }, {
+    "type": "function",
+    "snippet": "setHelpText(${1:help})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSubList. Adds inline help text to this sublist. This method is only supported on sublists via the UI Object API.",
+    "memberOf": "nlobjSubList"
+  }, {
+    "type": "function",
+    "snippet": "setLabel(${1:label})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSubList. Sets the label for this sublist. This method is only supported on sublists via the UI Object API.",
+    "memberOf": "nlobjSubList"
+  }, {
+    "type": "function",
+    "snippet": "setLineItemValue(${1:name},${2:linenum},${3:value})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSubList. Sets the value of a cell in a sublist field.",
+    "memberOf": "nlobjSubList"
+  }, {
+    "type": "function",
+    "snippet": "setLineItemValues(${1:values})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSubList. Sets values for multiple lines (Array of nlobjSearchResult objects or name/value pair Arrays) in a sublist.",
+    "memberOf": "nlobjSubList"
+  }, {
+    "type": "function",
+    "snippet": "setUniqueField(${1:name})",
+    "leftLabel": "nlobjField",
+    "description": "Member Of: nlobjSubList. Use this method to designate that a certain field on a sublist must contain a unique value. This method is available on inlineeditor and editor sublists only.",
+    "memberOf": "nlobjSubList"
+  }, {
+    "type": "function",
+    "snippet": "cancel()",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSubrecord. Use this method to cancel the current processing of the subrecord and revert subrecord data to the last committed change (submitted in the last commit() call).",
+    "memberOf": "nlobjSubrecord"
+  }, {
+    "type": "function",
+    "snippet": "commit()",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjSubrecord. Use this method to commit the subrecord to the parent record. See Saving Subrecords Using SuiteScript for additional information on saving subrecords.",
+    "memberOf": "nlobjSubrecord"
+  }, {
+    "type": "function",
+    "snippet": "setHelpText(${1:help})",
+    "leftLabel": "nlobjTab",
+    "description": "Member Of: nlobjTab. Sets the inline help used for this tab or subtab",
+    "memberOf": "nlobjTab"
+  }, {
+    "type": "function",
+    "snippet": "setLabel(${1:label})",
+    "leftLabel": "nlobjTab",
+    "description": "Member Of: nlobjTab. Sets the tab UI label",
+    "memberOf": "nlobjTab"
+  }, {
+    "type": "function",
+    "snippet": "addRecord(${1:variable},${2:record})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjTemplateRenderer. Binds nlobjRecord object to variable name used in template.",
+    "memberOf": "nlobjTemplateRenderer"
+  }, {
+    "type": "function",
+    "snippet": "addSearchResults(${1:variable},${2:searchResult})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjTemplateRenderer. Binds nlobjSearchResult object to variable name used in template.",
+    "memberOf": "nlobjTemplateRenderer"
+  }, {
+    "type": "function",
+    "snippet": "renderToResponse()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjTemplateRenderer. Renders HTML output to nlobjResponse object.",
+    "memberOf": "nlobjTemplateRenderer"
+  }, {
+    "type": "function",
+    "snippet": "renderToString()",
+    "leftLabel": "",
+    "description": "Member Of: nlobjTemplateRenderer. Returns template content interpreted by FreeMarker as XML string that can be passed to nlapiXMLToPDF(xmlstring) to produce PDF output.",
+    "memberOf": "nlobjTemplateRenderer"
+  }, {
+    "type": "function",
+    "snippet": "setTemplate(${1:template})",
+    "leftLabel": "Void",
+    "description": "Member Of: nlobjTemplateRenderer. Passes in raw string of template to be transformed by FreeMarker.",
+    "memberOf": "nlobjTemplateRenderer"
   }]
 }
