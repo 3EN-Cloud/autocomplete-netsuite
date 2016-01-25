@@ -16,3 +16,9 @@ SuiteScript v1.0 supported.
 
 * Support for all nlapi* functions.
 * Support for all nlobj* member functions.
+
+NetSuite File Header comment snippet:
+
+Type suiteletcomment and hit tab to insert a template for file header, you can then use tab to cycle through the template options:
+
+![suiteletcomment](https://raw.githubusercontent.com/ProductEarthSolutions/autocomplete-netsuite/master/screenshots/suiteletCommentSnippet.gif)
