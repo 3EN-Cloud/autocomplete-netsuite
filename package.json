@@ -1,7 +1,7 @@
 {
   "name": "autocomplete-netsuite",
   "main": "./lib/main",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "An autocomplete package for the netsuite suitescript api",
   "repository": "https://github.com/ProductEarthSolutions/autocomplete-netsuite",
   "license": "MIT",
