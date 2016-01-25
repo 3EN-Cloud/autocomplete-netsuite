@@ -12,12 +12,12 @@ To install use the command:
 
 ## Features
 
-SuiteScript v1.0 supported.
+**SuiteScript v1.0 supported:**
 
 * Support for all nlapi* functions.
 * Support for all nlobj* member functions.
 
-NetSuite File Header comment snippet:
+**NetSuite File Header comment snippet:**
 
 Type suiteletcomment and hit tab to insert a template for file header, you can then use tab to cycle through the template options:
 
