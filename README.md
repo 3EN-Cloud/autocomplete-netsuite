@@ -6,7 +6,10 @@ An autocomplete package for atom, that autocompletes functions from the NetSuite
 
 ## Installation
 
-To install use the command:
+You can install by searching for autocomplete-netsuite in the install tab in the settings view.
+More details on the settings view can be read here - https://atom.io/docs/v1.4.0/using-atom-atom-packages
+
+Or to install via command use:
 
     apm install autocomplete-netsuite
 
