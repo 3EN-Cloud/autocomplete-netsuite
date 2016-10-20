@@ -1,0 +1,2167 @@
+{
+  "functions": [
+    {
+      "type": "function",
+      "snippet": "changeEmail(${1:password},${2:newEmail},${3:onlyThisAccount=true})",
+      "leftLabel": "",
+      "description": "Member Of: N/auth, Change current user's email",
+      "memberOf": "N/auth"
+    },
+    {
+      "type": "function",
+      "snippet": "changePassword(${1:currentPassword},${2:newPassword})",
+      "leftLabel": "",
+      "description": "Member Of: N/auth, Change current user's password",
+      "memberOf": "N/auth"
+    },
+    {
+      "type": "function",
+      "snippet": "load(${1:type},${2:isDynamic})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, Load a configuration object with a specific type",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "id(${1:recordObj})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, Enum configuration type values.",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "save(${1:enablesourcing=false},${2:ignoremandatoryfields=false})",
+      "leftLabel": "number",
+      "description": "Member Of: N/config, The type of the record",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "removeField(${1:fieldId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, JSON.stringify() implementation.",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublist(${1:sublistId})",
+      "leftLabel": "Array",
+      "description": "Member Of: N/config, return array of names of all body fields, including machine header field and matrix header fields",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistFields(${1:sublistId})",
+      "leftLabel": "Array",
+      "description": "Member Of: N/config, return array of names of all sublists",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getValue(${1:fieldId})",
+      "leftLabel": "number|Date|string|Array",
+      "description": "Member Of: N/config, return value of the field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setValue(${1:fieldId},${2:value})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, set value of the field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getText(${1:fieldId})",
+      "leftLabel": "string",
+      "description": "Member Of: N/config, get value of the field in text representation",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setText(${1:fieldId},${2:text})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, set value of the field by text representation",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistField(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "Record.Field",
+      "description": "Member Of: N/config, return field object from record's sublist",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getLineCount(${1:sublistId})",
+      "leftLabel": "number",
+      "description": "Member Of: N/config, return line count of sublist",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "insertLine(${1:sublistId},${2:line},${3:ignoreRecalc})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, insert a sublist line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "removeLine(${1:sublistId},${2:line},${3:ignoreRecalc})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, remove a sublist line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "findSublistLineWithValue(${1:sublistId},${2:fieldId},${3:value})",
+      "leftLabel": "number",
+      "description": "Member Of: N/config, return the line number for the first occurrence of a field value in a sublist and return -1 if not found",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistValue(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "number|Date|string|Array",
+      "description": "Member Of: N/config, return value of a sublist field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setSublistValue(${1:sublistId},${2:fieldId},${3:line},${4:value})",
+      "leftLabel": "Recordï»¿",
+      "description": "Member Of: N/config, set the value of a sublist field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistText(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "stringï»¿",
+      "description": "Member Of: N/config, return value of a sublist field in text representationï»¿",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setSublistText(${1:sublistId},${2:fieldId},${3:line},${4:text})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, set the value of a sublist field in text representationï»¿",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "hasSubrecord(${1:fieldId})",
+      "leftLabel": "boolean",
+      "description": "Member Of: N/config, return a value indicating if the field has a subrecord",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getSubrecord(${1:fieldId})",
+      "leftLabel": "Subrecord",
+      "description": "Member Of: N/config, get the subrecord for the associated field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "removeSubrecord(${1:fieldId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, remove the subrecord for the associated field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "hasSublistSubrecord(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "boolean",
+      "description": "Member Of: N/config, return a value indicating if the associated sublist field has a subrecord",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistSubrecord(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "Subrecord",
+      "description": "Member Of: N/config, get the subrecord for the associated sublist field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "removeSublistSubrecord(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, remove the subrecord for the associated sublist field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setMatrixHeaderValue(${1:sublistId},${2:fieldId},${3:column},${4:value},${5:ignoreFieldChange})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, set the value for the associated header in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getMatrixHeaderValue(${1:sublistId},${2:fieldId},${3:column})",
+      "leftLabel": "number|Date|string",
+      "description": "Member Of: N/config, get the value for the associated header in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setMatrixSublistValue(${1:sublistId},${2:fieldId},${3:line},${4:column},${5:value})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, set the value for the associated field in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getMatrixSublistValue(${1:sublistId},${2:fieldId},${3:line},${4:column})",
+      "leftLabel": "number|Date|string",
+      "description": "Member Of: N/config, get the value for the associated field in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getMatrixHeaderField(${1:sublistId},${2:fieldId},${3:column})",
+      "leftLabel": "Record.Field",
+      "description": "Member Of: N/config, get the field for the specified header in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getMatrixSublistField(${1:sublistId},${2:fieldId},${3:column},${4:line})",
+      "leftLabel": "Record.Field",
+      "description": "Member Of: N/config, get the field for the specified sublist in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "findMatrixSublistLineWithValue(${1:sublistId},${2:fieldId},${3:value},${4:column})",
+      "leftLabel": "number",
+      "description": "Member Of: N/config, returns the line number of the first line that contains the specified value in the specified column of the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getMatrixHeaderCount(${1:sublistId},${2:fieldId})",
+      "leftLabel": "number",
+      "description": "Member Of: N/config, returns the number of columns for the specified matrix.",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "cancelLine(${1:sublistId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, cancel the current selected line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "commitLine(${1:sublistId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, commit the current selected line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "selectLine(${1:sublistId},${2:line})",
+      "leftLabel": "DynamicRecord",
+      "description": "Member Of: N/config, select line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "selectNewLine(${1:sublistId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, select a new line at the end of sublist",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getCurrentSublistValue(${1:sublistId},${2:fieldId})",
+      "leftLabel": "number|Date|string|Array",
+      "description": "Member Of: N/config, return value of a sublist field on the current selected sublist line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setCurrentSublistValue(${1:sublistId},${2:fieldId},${3:value},${4:ignoreFieldChange=false})",
+      "leftLabel": "DynamicRecord",
+      "description": "Member Of: N/config, set the value for field in the current selected line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getCurrentSublistText(${1:sublistId},${2:fieldId})",
+      "leftLabel": "number|Date|string|Array",
+      "description": "Member Of: N/config, return the value for field in the current selected line by text representation",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setCurrentSublistText(${1:sublistId},${2:fieldId},${3:text},${4:ignoreFieldChange=false})",
+      "leftLabel": "DynamicRecord",
+      "description": "Member Of: N/config, set the value for field in the current selected line by text representation",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getCurrentSublistIndex(${1:sublistId})",
+      "leftLabel": "number",
+      "description": "Member Of: N/config, return the line number of current selected line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "hasCurrentSublistSubrecord(${1:sublistId},${2:fieldId})",
+      "leftLabel": "boolean",
+      "description": "Member Of: N/config, return a value indicating if the associated sublist field has a subrecord on the current line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getCurrentSublistSubrecord(${1:sublistId},${2:fieldId})",
+      "leftLabel": "Subrecord",
+      "description": "Member Of: N/config, get the subrecord for the associated sublist field on the current line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "removeCurrentSublistSubrecord(${1:sublistId},${2:fieldId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, remove the subrecord for the associated sublist field on the current line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setCurrentMatrixSublistValue(${1:sublistId},${2:fieldId},${3:column},${4:value},${5:ignoreFieldChange},${6:fireSlavingSync})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, set the value for the line currently selected in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getCurrentMatrixSublistValue(${1:sublistId},${2:fieldId},${3:column})",
+      "leftLabel": "number|Date|string",
+      "description": "Member Of: N/config, get the value for the line currently selected in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "id(${1:recordObj})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, Primary object used to encapsulate a record object.",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "save(${1:enablesourcing=false},${2:ignoremandatoryfields=false})",
+      "leftLabel": "number",
+      "description": "Member Of: N/config, The type of the record",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "removeField(${1:fieldId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, JSON.stringify() implementation.",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublist(${1:sublistId})",
+      "leftLabel": "Array",
+      "description": "Member Of: N/config, return array of names of all body fields, including machine header field and matrix header fields",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistFields(${1:sublistId})",
+      "leftLabel": "Array",
+      "description": "Member Of: N/config, return array of names of all sublists",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getValue(${1:fieldId})",
+      "leftLabel": "number|Date|string|Array",
+      "description": "Member Of: N/config, return value of the field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setValue(${1:fieldId},${2:value})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, set value of the field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getText(${1:fieldId})",
+      "leftLabel": "string",
+      "description": "Member Of: N/config, get value of the field in text representation",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setText(${1:fieldId},${2:text})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, set value of the field by text representation",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistField(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "Record.Field",
+      "description": "Member Of: N/config, return field object from record's sublist",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getLineCount(${1:sublistId})",
+      "leftLabel": "number",
+      "description": "Member Of: N/config, return line count of sublist",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "insertLine(${1:sublistId},${2:line},${3:ignoreRecalc})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, insert a sublist line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "removeLine(${1:sublistId},${2:line},${3:ignoreRecalc})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, remove a sublist line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "findSublistLineWithValue(${1:sublistId},${2:fieldId},${3:value})",
+      "leftLabel": "number",
+      "description": "Member Of: N/config, return the line number for the first occurrence of a field value in a sublist and return -1 if not found",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistValue(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "number|Date|string|Array",
+      "description": "Member Of: N/config, return value of a sublist field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setSublistValue(${1:sublistId},${2:fieldId},${3:line},${4:value})",
+      "leftLabel": "Recordï»¿",
+      "description": "Member Of: N/config, set the value of a sublist field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistText(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "stringï»¿",
+      "description": "Member Of: N/config, return value of a sublist field in text representationï»¿",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setSublistText(${1:sublistId},${2:fieldId},${3:line},${4:text})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, set the value of a sublist field in text representationï»¿",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "hasSubrecord(${1:fieldId})",
+      "leftLabel": "boolean",
+      "description": "Member Of: N/config, return a value indicating if the field has a subrecord",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getSubrecord(${1:fieldId})",
+      "leftLabel": "Subrecord",
+      "description": "Member Of: N/config, get the subrecord for the associated field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "removeSubrecord(${1:fieldId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, remove the subrecord for the associated field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "hasSublistSubrecord(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "boolean",
+      "description": "Member Of: N/config, return a value indicating if the associated sublist field has a subrecord",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistSubrecord(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "Subrecord",
+      "description": "Member Of: N/config, get the subrecord for the associated sublist field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "removeSublistSubrecord(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, remove the subrecord for the associated sublist field",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setMatrixHeaderValue(${1:sublistId},${2:fieldId},${3:column},${4:value},${5:ignoreFieldChange})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, set the value for the associated header in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getMatrixHeaderValue(${1:sublistId},${2:fieldId},${3:column})",
+      "leftLabel": "number|Date|string",
+      "description": "Member Of: N/config, get the value for the associated header in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setMatrixSublistValue(${1:sublistId},${2:fieldId},${3:line},${4:column},${5:value})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, set the value for the associated field in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getMatrixSublistValue(${1:sublistId},${2:fieldId},${3:line},${4:column})",
+      "leftLabel": "number|Date|string",
+      "description": "Member Of: N/config, get the value for the associated field in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getMatrixHeaderField(${1:sublistId},${2:fieldId},${3:column})",
+      "leftLabel": "Record.Field",
+      "description": "Member Of: N/config, get the field for the specified header in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getMatrixSublistField(${1:sublistId},${2:fieldId},${3:column},${4:line})",
+      "leftLabel": "Record.Field",
+      "description": "Member Of: N/config, get the field for the specified sublist in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "findMatrixSublistLineWithValue(${1:sublistId},${2:fieldId},${3:value},${4:column})",
+      "leftLabel": "number",
+      "description": "Member Of: N/config, returns the line number of the first line that contains the specified value in the specified column of the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getMatrixHeaderCount(${1:sublistId},${2:fieldId})",
+      "leftLabel": "number",
+      "description": "Member Of: N/config, returns the number of columns for the specified matrix.",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "cancelLine(${1:sublistId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, cancel the current selected line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "commitLine(${1:sublistId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, commit the current selected line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "selectLine(${1:sublistId},${2:line})",
+      "leftLabel": "DynamicRecord",
+      "description": "Member Of: N/config, select line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "selectNewLine(${1:sublistId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, select a new line at the end of sublist",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getCurrentSublistValue(${1:sublistId},${2:fieldId})",
+      "leftLabel": "number|Date|string|Array",
+      "description": "Member Of: N/config, return value of a sublist field on the current selected sublist line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setCurrentSublistValue(${1:sublistId},${2:fieldId},${3:value},${4:ignoreFieldChange=false})",
+      "leftLabel": "DynamicRecord",
+      "description": "Member Of: N/config, set the value for field in the current selected line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getCurrentSublistText(${1:sublistId},${2:fieldId})",
+      "leftLabel": "number|Date|string|Array",
+      "description": "Member Of: N/config, return the value for field in the current selected line by text representation",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setCurrentSublistText(${1:sublistId},${2:fieldId},${3:text},${4:ignoreFieldChange=false})",
+      "leftLabel": "DynamicRecord",
+      "description": "Member Of: N/config, set the value for field in the current selected line by text representation",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getCurrentSublistIndex(${1:sublistId})",
+      "leftLabel": "number",
+      "description": "Member Of: N/config, return the line number of current selected line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "hasCurrentSublistSubrecord(${1:sublistId},${2:fieldId})",
+      "leftLabel": "boolean",
+      "description": "Member Of: N/config, return a value indicating if the associated sublist field has a subrecord on the current line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getCurrentSublistSubrecord(${1:sublistId},${2:fieldId})",
+      "leftLabel": "Subrecord",
+      "description": "Member Of: N/config, get the subrecord for the associated sublist field on the current line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "removeCurrentSublistSubrecord(${1:sublistId},${2:fieldId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, remove the subrecord for the associated sublist field on the current line",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "setCurrentMatrixSublistValue(${1:sublistId},${2:fieldId},${3:column},${4:value},${5:ignoreFieldChange},${6:fireSlavingSync})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/config, set the value for the line currently selected in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "getCurrentMatrixSublistValue(${1:sublistId},${2:fieldId},${3:column})",
+      "leftLabel": "number|Date|string",
+      "description": "Member Of: N/config, get the value for the line currently selected in the matrix",
+      "memberOf": "N/config"
+    },
+    {
+      "type": "function",
+      "snippet": "createHash(${1:algorithm})",
+      "leftLabel": "Hash",
+      "description": "Member Of: N/crypto, ",
+      "memberOf": "N/crypto"
+    },
+    {
+      "type": "function",
+      "snippet": "createHmac(${1:algorithm},${2:key})",
+      "leftLabel": "Hmac",
+      "description": "Member Of: N/crypto, ",
+      "memberOf": "N/crypto"
+    },
+    {
+      "type": "function",
+      "snippet": "createCipher(${1:algorithm},${2:SecretKey}},${3:blockCipherMode},${4:padding})",
+      "leftLabel": "Cipher",
+      "description": "Member Of: N/crypto, ",
+      "memberOf": "N/crypto"
+    },
+    {
+      "type": "function",
+      "snippet": "createDecipher(${1:algorithm},${2:key},${3:blockCipherMode},${4:padding},${5:iv})",
+      "leftLabel": "Decipher",
+      "description": "Member Of: N/crypto, ",
+      "memberOf": "N/crypto"
+    },
+    {
+      "type": "function",
+      "snippet": "update(${1:input},${2:inputEncoding})",
+      "leftLabel": "crypto.Hash",
+      "description": "Member Of: N/crypto, @enum",
+      "memberOf": "N/crypto"
+    },
+    {
+      "type": "function",
+      "snippet": "digest(${1:outputEncoding})",
+      "leftLabel": "string",
+      "description": "Member Of: N/crypto, @param {Object} options",
+      "memberOf": "N/crypto"
+    },
+    {
+      "type": "function",
+      "snippet": "update(${1:input},${2:inputEncoding})",
+      "leftLabel": "crypto.Hmac",
+      "description": "Member Of: N/crypto, Returns the object type name (crypto.Hash)",
+      "memberOf": "N/crypto"
+    },
+    {
+      "type": "function",
+      "snippet": "digest(${1:outputEncoding})",
+      "leftLabel": "string",
+      "description": "Member Of: N/crypto, @param {Object} options",
+      "memberOf": "N/crypto"
+    },
+    {
+      "type": "function",
+      "snippet": "update(${1:input},${2:inputEncoding})",
+      "leftLabel": "string",
+      "description": "Member Of: N/crypto, Returns the object type name (crypto.Hash)",
+      "memberOf": "N/crypto"
+    },
+    {
+      "type": "function",
+      "snippet": "update(${1:outputEncoding},${2:input},${3:inputEncoding})",
+      "leftLabel": "CipherPayload",
+      "description": "Member Of: N/crypto, @param {Object} options",
+      "memberOf": "N/crypto"
+    },
+    {
+      "type": "function",
+      "snippet": "exchangeRate(${1:source},${2:target},${3:date})",
+      "leftLabel": "number",
+      "description": "Member Of: N/currency, Retrieves the exchange rate between two currencies based on the specified date.",
+      "memberOf": "N/currency"
+    },
+    {
+      "type": "function",
+      "snippet": "send(${1:author},${2:recipients},${3:cc},${4:bcc},${5:subject},${6:body},${7:replyTo},${8:File[}},${9:relatedRecords},${10:isInternalOnly})",
+      "leftLabel": "undefined",
+      "description": "Member Of: N/email, Send email with bounce back",
+      "memberOf": "N/email"
+    },
+    {
+      "type": "function",
+      "snippet": "sendBulk(${1:author},${2:recipients},${3:cc},${4:bcc},${5:subject},${6:body},${7:replyTo},${8:File[}},${9:relatedRecords},${10:isInternalOnly})",
+      "leftLabel": "undefined",
+      "description": "Member Of: N/email, Send email without bounce back",
+      "memberOf": "N/email"
+    },
+    {
+      "type": "function",
+      "snippet": "convert(${1:string},${2:inputEncoding},${3:outputEncoding})",
+      "leftLabel": "string",
+      "description": "Member Of: N/encode, @param {Object} options",
+      "memberOf": "N/encode"
+    },
+    {
+      "type": "function",
+      "snippet": "create(${1:name},${2:message},${3:notifyOff})",
+      "leftLabel": "SuiteScriptError",
+      "description": "Member Of: N/error, Create a new Error object",
+      "memberOf": "N/error"
+    },
+    {
+      "type": "function",
+      "snippet": "create(${1:name},${2:fileType},${3:contents})",
+      "leftLabel": "File",
+      "description": "Member Of: N/file, Instantiate a file object (specifying the name, type, and contents which are base-64 encoded for binary types.)",
+      "memberOf": "N/file"
+    },
+    {
+      "type": "function",
+      "snippet": "load(${1:id})",
+      "leftLabel": "File",
+      "description": "Member Of: N/file, Load a file from the file cabinet (via its internal ID or path).",
+      "memberOf": "N/file"
+    },
+    {
+      "type": "function",
+      "snippet": "AUTOCAD(${1:id})",
+      "leftLabel": "",
+      "description": "Member Of: N/file, Delete a file from the file cabinet.",
+      "memberOf": "N/file"
+    },
+    {
+      "type": "function",
+      "snippet": "parse(${1:value},${2:type},${3:timezone})",
+      "leftLabel": "Date|string|number",
+      "description": "Member Of: N/format, Parse a value from the appropriate preference formatted-value to a raw value.",
+      "memberOf": "N/format"
+    },
+    {
+      "type": "function",
+      "snippet": "format(${1:value},${2:type},${3:timezone})",
+      "leftLabel": "string",
+      "description": "Member Of: N/format, Parse a value from the raw value to its appropriate preference formatted-value.",
+      "memberOf": "N/format"
+    },
+    {
+      "type": "function",
+      "snippet": "createSecureString(${1:input},${2:inputEncoding})",
+      "leftLabel": "SecureString",
+      "description": "Member Of: N/https, Enum for HTTP methods.",
+      "memberOf": "N/https"
+    },
+    {
+      "type": "function",
+      "snippet": "convertEncoding(${1:toEncoding})",
+      "leftLabel": "SecureString",
+      "description": "Member Of: N/https, @enum",
+      "memberOf": "N/https"
+    },
+    {
+      "type": "function",
+      "snippet": "appendString(${1:input},${2:inputEncoding})",
+      "leftLabel": "SecureString",
+      "description": "Member Of: N/https, ",
+      "memberOf": "N/https"
+    },
+    {
+      "type": "function",
+      "snippet": "appendSecureString(${1:secureString})",
+      "leftLabel": "SecureString",
+      "description": "Member Of: N/https, ",
+      "memberOf": "N/https"
+    },
+    {
+      "type": "function",
+      "snippet": "hash(${1:algorithm})",
+      "leftLabel": "SecureString",
+      "description": "Member Of: N/https, Helper function for token.appendToken()",
+      "memberOf": "N/https"
+    },
+    {
+      "type": "function",
+      "snippet": "hmac(${1:algorithm},${2:key})",
+      "leftLabel": "SecureString",
+      "description": "Member Of: N/https, ",
+      "memberOf": "N/https"
+    },
+    {
+      "type": "function",
+      "snippet": "create(${1:type},${2:isDynamic=false},${3:defaultValues={}})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, Create a new record object based on provided type",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "load(${1:type},${2:id},${3:isDynamic=false},${4:defaultValues={}})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, Load an existing nlobjRecord from the database based on provided type, id",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "copy(${1:type},${2:id},${3:isDynamic=false},${4:defaultValues={}})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, Copy a record object based on provided type, id",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "transform(${1:fromType},${2:fromId},${3:toType},${4:isDynamic=false},${5:defaultValues={}})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, Transform a record into another type (i.e. salesOrder -> invoice -or- opportunity -> estimate)",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "submitFields(${1:type},${2:id},${3:type},${4:id},${5:values},${6:options},${7:options.enablesourcing=true},${8:options.ignoreMandatoryFields=false})",
+      "leftLabel": "number",
+      "description": "Member Of: N/record, Delete a record object based on provided type, id and return the id of deleted record",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "attach(${1:record},${2:record.type},${3:record.id},${4:to},${5:to.type},${6:to.id},${7:attributes=null})",
+      "leftLabel": "",
+      "description": "Member Of: N/record, attach record to another record",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "detach(${1:record},${2:record.type},${3:record.id},${4:from},${5:from.type},${6:from.id},${7:attributes=null})",
+      "leftLabel": "",
+      "description": "Member Of: N/record, detach record from another record",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "id(${1:recordObj})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, @enum",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "save(${1:enablesourcing=false},${2:ignoremandatoryfields=false})",
+      "leftLabel": "number",
+      "description": "Member Of: N/record, The type of the record",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "removeField(${1:fieldId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, JSON.stringify() implementation.",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublist(${1:sublistId})",
+      "leftLabel": "Array",
+      "description": "Member Of: N/record, return array of names of all body fields, including machine header field and matrix header fields",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistFields(${1:sublistId})",
+      "leftLabel": "Array",
+      "description": "Member Of: N/record, return array of names of all sublists",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getValue(${1:fieldId})",
+      "leftLabel": "number|Date|string|Array",
+      "description": "Member Of: N/record, return value of the field",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "setValue(${1:fieldId},${2:value})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, set value of the field",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getText(${1:fieldId})",
+      "leftLabel": "string",
+      "description": "Member Of: N/record, get value of the field in text representation",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "setText(${1:fieldId},${2:text})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, set value of the field by text representation",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistField(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "Record.Field",
+      "description": "Member Of: N/record, return field object from record's sublist",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getLineCount(${1:sublistId})",
+      "leftLabel": "number",
+      "description": "Member Of: N/record, return line count of sublist",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "insertLine(${1:sublistId},${2:line},${3:ignoreRecalc})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, insert a sublist line",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "removeLine(${1:sublistId},${2:line},${3:ignoreRecalc})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, remove a sublist line",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "findSublistLineWithValue(${1:sublistId},${2:fieldId},${3:value})",
+      "leftLabel": "number",
+      "description": "Member Of: N/record, return the line number for the first occurrence of a field value in a sublist and return -1 if not found",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistValue(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "number|Date|string|Array",
+      "description": "Member Of: N/record, return value of a sublist field",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "setSublistValue(${1:sublistId},${2:fieldId},${3:line},${4:value})",
+      "leftLabel": "Recordï»¿",
+      "description": "Member Of: N/record, set the value of a sublist field",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistText(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "stringï»¿",
+      "description": "Member Of: N/record, return value of a sublist field in text representationï»¿",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "setSublistText(${1:sublistId},${2:fieldId},${3:line},${4:text})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, set the value of a sublist field in text representationï»¿",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "hasSubrecord(${1:fieldId})",
+      "leftLabel": "boolean",
+      "description": "Member Of: N/record, return a value indicating if the field has a subrecord",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getSubrecord(${1:fieldId})",
+      "leftLabel": "Subrecord",
+      "description": "Member Of: N/record, get the subrecord for the associated field",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "removeSubrecord(${1:fieldId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, remove the subrecord for the associated field",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "hasSublistSubrecord(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "boolean",
+      "description": "Member Of: N/record, return a value indicating if the associated sublist field has a subrecord",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistSubrecord(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "Subrecord",
+      "description": "Member Of: N/record, get the subrecord for the associated sublist field",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "removeSublistSubrecord(${1:sublistId},${2:fieldId},${3:line})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, remove the subrecord for the associated sublist field",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "setMatrixHeaderValue(${1:sublistId},${2:fieldId},${3:column},${4:value},${5:ignoreFieldChange})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, set the value for the associated header in the matrix",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getMatrixHeaderValue(${1:sublistId},${2:fieldId},${3:column})",
+      "leftLabel": "number|Date|string",
+      "description": "Member Of: N/record, get the value for the associated header in the matrix",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "setMatrixSublistValue(${1:sublistId},${2:fieldId},${3:line},${4:column},${5:value})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, set the value for the associated field in the matrix",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getMatrixSublistValue(${1:sublistId},${2:fieldId},${3:line},${4:column})",
+      "leftLabel": "number|Date|string",
+      "description": "Member Of: N/record, get the value for the associated field in the matrix",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getMatrixHeaderField(${1:sublistId},${2:fieldId},${3:column})",
+      "leftLabel": "Record.Field",
+      "description": "Member Of: N/record, get the field for the specified header in the matrix",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getMatrixSublistField(${1:sublistId},${2:fieldId},${3:column},${4:line})",
+      "leftLabel": "Record.Field",
+      "description": "Member Of: N/record, get the field for the specified sublist in the matrix",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "findMatrixSublistLineWithValue(${1:sublistId},${2:fieldId},${3:value},${4:column})",
+      "leftLabel": "number",
+      "description": "Member Of: N/record, returns the line number of the first line that contains the specified value in the specified column of the matrix",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getMatrixHeaderCount(${1:sublistId},${2:fieldId})",
+      "leftLabel": "number",
+      "description": "Member Of: N/record, returns the number of columns for the specified matrix.",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "cancelLine(${1:sublistId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, cancel the current selected line",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "commitLine(${1:sublistId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, commit the current selected line",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "selectLine(${1:sublistId},${2:line})",
+      "leftLabel": "DynamicRecord",
+      "description": "Member Of: N/record, select line",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "selectNewLine(${1:sublistId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, select a new line at the end of sublist",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getCurrentSublistValue(${1:sublistId},${2:fieldId})",
+      "leftLabel": "number|Date|string|Array",
+      "description": "Member Of: N/record, return value of a sublist field on the current selected sublist line",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "setCurrentSublistValue(${1:sublistId},${2:fieldId},${3:value},${4:ignoreFieldChange=false})",
+      "leftLabel": "DynamicRecord",
+      "description": "Member Of: N/record, set the value for field in the current selected line",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getCurrentSublistText(${1:sublistId},${2:fieldId})",
+      "leftLabel": "number|Date|string|Array",
+      "description": "Member Of: N/record, return the value for field in the current selected line by text representation",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "setCurrentSublistText(${1:sublistId},${2:fieldId},${3:text},${4:ignoreFieldChange=false})",
+      "leftLabel": "DynamicRecord",
+      "description": "Member Of: N/record, set the value for field in the current selected line by text representation",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getCurrentSublistIndex(${1:sublistId})",
+      "leftLabel": "number",
+      "description": "Member Of: N/record, return the line number of current selected line",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "hasCurrentSublistSubrecord(${1:sublistId},${2:fieldId})",
+      "leftLabel": "boolean",
+      "description": "Member Of: N/record, return a value indicating if the associated sublist field has a subrecord on the current line",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getCurrentSublistSubrecord(${1:sublistId},${2:fieldId})",
+      "leftLabel": "Subrecord",
+      "description": "Member Of: N/record, get the subrecord for the associated sublist field on the current line",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "removeCurrentSublistSubrecord(${1:sublistId},${2:fieldId})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, remove the subrecord for the associated sublist field on the current line",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "setCurrentMatrixSublistValue(${1:sublistId},${2:fieldId},${3:column},${4:value},${5:ignoreFieldChange},${6:fireSlavingSync})",
+      "leftLabel": "Record",
+      "description": "Member Of: N/record, set the value for the line currently selected in the matrix",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "getCurrentMatrixSublistValue(${1:sublistId},${2:fieldId},${3:column})",
+      "leftLabel": "number|Date|string",
+      "description": "Member Of: N/record, get the value for the line currently selected in the matrix",
+      "memberOf": "N/record"
+    },
+    {
+      "type": "function",
+      "snippet": "redirect(${1:url},${2:parameters})",
+      "leftLabel": "",
+      "description": "Member Of: N/redirect, Redirect to a URL",
+      "memberOf": "N/redirect"
+    },
+    {
+      "type": "function",
+      "snippet": "toSuitelet(${1:scriptId},${2:deploymentId},${3:isExternal},${4:parameters})",
+      "leftLabel": "",
+      "description": "Member Of: N/redirect, Redirect to a suitelet",
+      "memberOf": "N/redirect"
+    },
+    {
+      "type": "function",
+      "snippet": "toRecord(${1:type},${2:id},${3:isEditMode},${4:parameters})",
+      "leftLabel": "",
+      "description": "Member Of: N/redirect, Redirect to a record",
+      "memberOf": "N/redirect"
+    },
+    {
+      "type": "function",
+      "snippet": "toTaskLink(${1:id},${2:parameters})",
+      "leftLabel": "",
+      "description": "Member Of: N/redirect, Redirect to a task link",
+      "memberOf": "N/redirect"
+    },
+    {
+      "type": "function",
+      "snippet": "toSavedSearch(${1:id})",
+      "leftLabel": "",
+      "description": "Member Of: N/redirect, Redirect to saved search",
+      "memberOf": "N/redirect"
+    },
+    {
+      "type": "function",
+      "snippet": "toSavedSearchResult(${1:id})",
+      "leftLabel": "",
+      "description": "Member Of: N/redirect, Redirect to saved search results",
+      "memberOf": "N/redirect"
+    },
+    {
+      "type": "function",
+      "snippet": "toSearch(${1:search})",
+      "leftLabel": "",
+      "description": "Member Of: N/redirect, Redirect to search",
+      "memberOf": "N/redirect"
+    },
+    {
+      "type": "function",
+      "snippet": "toSearchResult(${1:Search})",
+      "leftLabel": "",
+      "description": "Member Of: N/redirect, Redirect to search results",
+      "memberOf": "N/redirect"
+    },
+    {
+      "type": "function",
+      "snippet": "transaction(${1:entityId},${2:printMode},${3:formId})",
+      "leftLabel": "File",
+      "description": "Member Of: N/render, ",
+      "memberOf": "N/render"
+    },
+    {
+      "type": "function",
+      "snippet": "statement(${1:entityId},${2:printMode},${3:formId},${4:startDate},${5:statementDate},${6:openTransactionsOnly})",
+      "leftLabel": "File",
+      "description": "Member Of: N/render, @governance 10 units",
+      "memberOf": "N/render"
+    },
+    {
+      "type": "function",
+      "snippet": "packingSlip(${1:entityId},${2:printMode},${3:formId},${4:fulfillmentId})",
+      "leftLabel": "File",
+      "description": "Member Of: N/render, @governance 10 units",
+      "memberOf": "N/render"
+    },
+    {
+      "type": "function",
+      "snippet": "pickingTicket(${1:entityId},${2:printMode},${3:formId},${4:shipgroup},${5:location})",
+      "leftLabel": "File",
+      "description": "Member Of: N/render, @governance 10 units",
+      "memberOf": "N/render"
+    },
+    {
+      "type": "function",
+      "snippet": "bom(${1:entityId},${2:printMode})",
+      "leftLabel": "File",
+      "description": "Member Of: N/render, @governance 10 units",
+      "memberOf": "N/render"
+    },
+    {
+      "type": "function",
+      "snippet": "xmlToPdf(${1:xmlString})",
+      "leftLabel": "File",
+      "description": "Member Of: N/render, @governance 0 units",
+      "memberOf": "N/render"
+    },
+    {
+      "type": "function",
+      "snippet": "mergeEmail(${1:templateId},${2:entity},${3:recipient},${4:customRecord},${5:supportCaseId},${6:transactionId})",
+      "leftLabel": "EmailMergeResult",
+      "description": "Member Of: N/render, ",
+      "memberOf": "N/render"
+    },
+    {
+      "type": "function",
+      "snippet": "addRecord(${1:templateName},${2:Record})",
+      "leftLabel": "undefined",
+      "description": "Member Of: N/render, Enum print mode type values.",
+      "memberOf": "N/render"
+    },
+    {
+      "type": "function",
+      "snippet": "addSearchResults(${1:templateName},${2:Result})",
+      "leftLabel": "undefined",
+      "description": "Member Of: N/render, @param {Object} options",
+      "memberOf": "N/render"
+    },
+    {
+      "type": "function",
+      "snippet": "renderToResponse(${1:ServerResponse})",
+      "leftLabel": "undefined",
+      "description": "Member Of: N/render, @return {string}",
+      "memberOf": "N/render"
+    },
+    {
+      "type": "function",
+      "snippet": "isFeatureInEffect(${1:feature})",
+      "leftLabel": "boolean",
+      "description": "Member Of: N/runtime, Get the current log in user object",
+      "memberOf": "N/runtime"
+    },
+    {
+      "type": "function",
+      "snippet": "getParameter(${1:name})",
+      "leftLabel": "number|Date|string|Array",
+      "description": "Member Of: N/runtime, @name runtime#queueCount",
+      "memberOf": "N/runtime"
+    },
+    {
+      "type": "function",
+      "snippet": "toJSON(${1:name},${2:name},${3:value})",
+      "leftLabel": "string",
+      "description": "Member Of: N/runtime, get JSON format of the object",
+      "memberOf": "N/runtime"
+    },
+    {
+      "type": "function",
+      "snippet": "getPermission(${1:name})",
+      "leftLabel": "number",
+      "description": "Member Of: N/runtime, @return {string}",
+      "memberOf": "N/runtime"
+    },
+    {
+      "type": "function",
+      "snippet": "create(${1:type},${2:filters},${3:columns},${4:title},${5:id})",
+      "leftLabel": "Search",
+      "description": "Member Of: N/search, Creates a new search. The search can be modified and run as an ad-hoc search, without saving it. Alternatively,",
+      "memberOf": "N/search"
+    },
+    {
+      "type": "function",
+      "snippet": "load(${1:id})",
+      "leftLabel": "Search",
+      "description": "Member Of: N/search, Loads an existing saved search. The saved search could have been created using the UI, or created using search.create()",
+      "memberOf": "N/search"
+    },
+    {
+      "type": "function",
+      "snippet": "duplicates(${1:id},${2:type},${3:fields},${4:id})",
+      "leftLabel": "Result[]",
+      "description": "Member Of: N/search, Deletes an existing saved search.",
+      "memberOf": "N/search"
+    },
+    {
+      "type": "function",
+      "snippet": "global(${1:keywords})",
+      "leftLabel": "Result[]",
+      "description": "Member Of: N/search, Performs a global search against a single keyword or multiple keywords.",
+      "memberOf": "N/search"
+    },
+    {
+      "type": "function",
+      "snippet": "lookupFields(${1:type},${2:id},${3:columns})",
+      "leftLabel": "Object",
+      "description": "Member Of: N/search, Performs a search for one or more body fields on a record. This function supports joined-field lookups.",
+      "memberOf": "N/search"
+    },
+    {
+      "type": "function",
+      "snippet": "createColumn(${1:name},${2:join},${3:summary},${4:formula},${5:function},${6:label},${7:sort})",
+      "leftLabel": "Column",
+      "description": "Member Of: N/search, Creates a search.Column object.",
+      "memberOf": "N/search"
+    },
+    {
+      "type": "function",
+      "snippet": "createFilter(${1:name},${2:join},${3:operator},${4:values},${5:formula},${6:summary})",
+      "leftLabel": "Filter",
+      "description": "Member Of: N/search, Creates a search.Filter object.",
+      "memberOf": "N/search"
+    },
+    {
+      "type": "function",
+      "snippet": "setWhenOrderedBy(${1:name},${2:join})",
+      "leftLabel": "search.Column",
+      "description": "Member Of: N/search, Enum for search operators.",
+      "memberOf": "N/search"
+    },
+    {
+      "type": "function",
+      "snippet": "getRange(${1:start},${2:end})",
+      "leftLabel": "Result[]",
+      "description": "Member Of: N/search, Returns the object type name (search.Column)",
+      "memberOf": "N/search"
+    },
+    {
+      "type": "function",
+      "snippet": "getValue(${1:name},${2:join},${3:summary})",
+      "leftLabel": "string",
+      "description": "Member Of: N/search, Calls the developer-defined callback function for every result in this set. The result set processed by each() may have maximum 4000 rows.",
+      "memberOf": "N/search"
+    },
+    {
+      "type": "function",
+      "snippet": "getText(${1:name},${2:join},${3:summary})",
+      "leftLabel": "string",
+      "description": "Member Of: N/search, Returns the UI display name (i.e. the text value) of a specified search return column.",
+      "memberOf": "N/search"
+    },
+    {
+      "type": "function",
+      "snippet": "generateSuiteSignOnToken(${1:suiteSignOnId})",
+      "leftLabel": "string",
+      "description": "Member Of: N/sso, Generate a new SuiteSignOn token for a user",
+      "memberOf": "N/sso"
+    },
+    {
+      "type": "function",
+      "snippet": "create(${1:taskType})",
+      "leftLabel": "task.ScheduledScriptTask",
+      "description": "Member Of: N/task, Creates a task of the given type and returns the task object.",
+      "memberOf": "N/task"
+    },
+    {
+      "type": "function",
+      "snippet": "checkStatus(${1:taskId})",
+      "leftLabel": "task.TaskStatus",
+      "description": "Member Of: N/task, Check current status of a submitted task. The task to be checked is identified by its task ID.",
+      "memberOf": "N/task"
+    },
+    {
+      "type": "function",
+      "snippet": "addButton(${1:id},${2:label},${3:script})",
+      "leftLabel": "Button",
+      "description": "Member Of: N/ui, Instantiate a assistant object (specifying the title, and whether to hide the menu)",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistValue(${1:id},${2:line})",
+      "leftLabel": "String",
+      "description": "Member Of: N/ui, Get the value of a field on the list",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "setSublistValue(${1:id},${2:line},${3:value})",
+      "leftLabel": "String",
+      "description": "Member Of: N/ui, Set the value of a field on the list",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addField(${1:id},${2:label},${3:type},${4:source},${5:tab})",
+      "leftLabel": "ui.Field",
+      "description": "Member Of: N/ui, Adds refresh all buttons to the sublist",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "getSelectOptions(${1:filter},${2:filteroperator})",
+      "leftLabel": "*|Array",
+      "description": "Member Of: N/ui, Return an instance of ui.FieldGroup",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "setHelpText(${1:help},${2:showInlineForAssistant})",
+      "leftLabel": "",
+      "description": "Member Of: N/ui, Set help text for a field",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addSelectOption(${1:value},${2:text},${3:isSelected})",
+      "leftLabel": "",
+      "description": "Member Of: N/ui, Add a select option to a select field",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistFieldIds(${1:group})",
+      "leftLabel": "String[]",
+      "description": "Member Of: N/ui, Is the button disabled",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "getValue(${1:id})",
+      "leftLabel": "String|String[]",
+      "description": "Member Of: N/ui, @return {String[]}",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "getLineCount(${1:group})",
+      "leftLabel": "number",
+      "description": "Member Of: N/ui, Get the number of lines in a sublist",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublistValue(${1:group},${2:id},${3:line})",
+      "leftLabel": "String",
+      "description": "Member Of: N/ui, Get the number of lines in a sublist",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "clientScript(${1:script})",
+      "leftLabel": "",
+      "description": "Member Of: N/ui, Scriptable UI assistant page.",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "setSplash(${1:title},${2:text1},${3:text2})",
+      "leftLabel": "",
+      "description": "Member Of: N/ui, @param {Object}options",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "getField(${1:id})",
+      "leftLabel": "ui.Field",
+      "description": "Member Of: N/ui, Get a Field object assistant its id",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "getFieldGroup(${1:id})",
+      "leftLabel": "ui.Field",
+      "description": "Member Of: N/ui, Get a FieldGroup  object from its id",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "getStep(${1:id})",
+      "leftLabel": "AssistantStep",
+      "description": "Member Of: N/ui, Get the last action taken buy the uset",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublist(${1:id})",
+      "leftLabel": "ui.Sublist",
+      "description": "Member Of: N/ui, Get a Sublist  object from its id",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addStep(${1:id},${2:label})",
+      "leftLabel": "",
+      "description": "Member Of: N/ui, Add a step to the assistant",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addField(${1:id},${2:label},${3:type},${4:source},${5:tab})",
+      "leftLabel": "ui.Field",
+      "description": "Member Of: N/ui, Add a field to the form",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addFieldGroup(${1:id},${2:label})",
+      "leftLabel": "FieldGroup",
+      "description": "Member Of: N/ui, Add a field group to the assistnat",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addSublist(${1:id},${2:label},${3:type})",
+      "leftLabel": "Sublist",
+      "description": "Member Of: N/ui, Add a Sublist to the assistant",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addButton(${1:id},${2:label},${3:script})",
+      "leftLabel": "Button",
+      "description": "Member Of: N/ui, Get all ids for fields in the assistant",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addCredentialField(${1:id},${2:label},${3:restrictToDomains},${4:restrictToScriptId},${5:restrictToCurrentUser},${6:tab})",
+      "leftLabel": "Field",
+      "description": "Member Of: N/ui, ",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addSecretKeyField(${1:id},${2:label},${3:restrictToScriptId},${4:restrictToCurrentUser},${5:tab})",
+      "leftLabel": "Field",
+      "description": "Member Of: N/ui, ",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addField(${1:id},${2:label},${3:type},${4:source},${5:tab})",
+      "leftLabel": "ui.Field",
+      "description": "Member Of: N/ui, Add a field to the form",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addFieldGroup(${1:id},${2:label},${3:tab})",
+      "leftLabel": "FieldGroup",
+      "description": "Member Of: N/ui, Add a field group to the form",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addPageLink(${1:type},${2:title},${3:url})",
+      "leftLabel": "",
+      "description": "Member Of: N/ui, Add a link to the form",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addSublist(${1:id},${2:label},${3:type},${4:tab})",
+      "leftLabel": "Sublist",
+      "description": "Member Of: N/ui, Add a Sublist to the form",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addSubtab(${1:id},${2:label},${3:tab})",
+      "leftLabel": "Tab",
+      "description": "Member Of: N/ui, Add a Subtab to the form",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addTab(${1:id},${2:label})",
+      "leftLabel": "Tab",
+      "description": "Member Of: N/ui, Add a Tab to the form",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addResetButton(${1:label})",
+      "leftLabel": "Button",
+      "description": "Member Of: N/ui, Add a Reset button to the form",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addSubmitButton(${1:label})",
+      "leftLabel": "Button",
+      "description": "Member Of: N/ui, Add a Submit button to the form",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "getButton(${1:id})",
+      "leftLabel": "Button",
+      "description": "Member Of: N/ui, Get a Button object from its id",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "getField(${1:id})",
+      "leftLabel": "ui.Field",
+      "description": "Member Of: N/ui, Get a Field object from its id",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "getSubtab(${1:id})",
+      "leftLabel": "Tab",
+      "description": "Member Of: N/ui, Get a Subtab object from its id",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "getTab(${1:id})",
+      "leftLabel": "ui.Tab",
+      "description": "Member Of: N/ui, Get a Tab object from its id",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "getSublist(${1:id})",
+      "leftLabel": "Sublist",
+      "description": "Member Of: N/ui, Get all the Tab objects",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "insertField(${1:Field}},${2:nextfield})",
+      "leftLabel": "",
+      "description": "Member Of: N/ui, Insert a field before another field",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "insertSublist(${1:Sublist}},${2:nextsublist})",
+      "leftLabel": "",
+      "description": "Member Of: N/ui, Insert a sublist before another sublist",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "insertTab(${1:Tab}},${2:nexttab})",
+      "leftLabel": "",
+      "description": "Member Of: N/ui, Insert a Tab before another tab",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "removeButton(${1:id})",
+      "leftLabel": "",
+      "description": "Member Of: N/ui, Remove a button given its id",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "clientScript(${1:script})",
+      "leftLabel": "",
+      "description": "Member Of: N/ui, Set the default values of many fields",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addButton(${1:id},${2:label},${3:script})",
+      "leftLabel": "Button",
+      "description": "Member Of: N/ui, Scriptable UI List page.",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addColumn(${1:id},${2:type},${3:label},${4:align})",
+      "leftLabel": "ListColumn",
+      "description": "Member Of: N/ui, Add a Column to the List page",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addEditColumn(${1:column},${2:showView},${3:showHrefCol})",
+      "leftLabel": "ListColumn",
+      "description": "Member Of: N/ui, Add an Edit or Edit/View column",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addPageLink(${1:type},${2:title},${3:url})",
+      "leftLabel": "List",
+      "description": "Member Of: N/ui, Adds a navigation cross-link to the list page",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addRow(${1:row})",
+      "leftLabel": "ListColumn",
+      "description": "Member Of: N/ui, Add a row (Array of name/value pairs or search.Result)",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addRows(${1:rows})",
+      "leftLabel": "ListColumn",
+      "description": "Member Of: N/ui, Adds multiple rows (Array of search.Result or name/value pair Arrays)",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "clientScript(${1:id})",
+      "leftLabel": "ListColumn",
+      "description": "Member Of: N/ui, Sets the Client SuiteScript used for this page.",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "addParamToURL(${1:param},${2:value},${3:dynamic})",
+      "leftLabel": "ListColumn",
+      "description": "Member Of: N/ui, Scriptable UI List Column.",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "setURL(${1:url},${2:dynamic})",
+      "leftLabel": "ListColumn",
+      "description": "Member Of: N/ui, @name ColumnList#label Label this list column",
+      "memberOf": "N/ui"
+    },
+    {
+      "type": "function",
+      "snippet": "resolveTaskLink(${1:id},${2:parameters})",
+      "leftLabel": "String",
+      "description": "Member Of: N/url, @param {Object} opts",
+      "memberOf": "N/url"
+    },
+    {
+      "type": "function",
+      "snippet": "format(${1:domain},${2:parameters})",
+      "leftLabel": "String",
+      "description": "Member Of: N/url, @param {Object} opts",
+      "memberOf": "N/url"
+    },
+    {
+      "type": "function",
+      "snippet": "initiate(${1:recordType},${2:recordId},${3:workflowId},${4:defaultValues})",
+      "leftLabel": "number",
+      "description": "Member Of: N/workflow, Triggers a workflow on a record.",
+      "memberOf": "N/workflow"
+    },
+    {
+      "type": "function",
+      "snippet": "trigger(${1:recordType},${2:recordId},${3:workflowId},${4:workflowInstanceId},${5:actionId},${6:stateId})",
+      "leftLabel": "number",
+      "description": "Member Of: N/workflow, Triggers a workflow on a record.",
+      "memberOf": "N/workflow"
+    },
+    {
+      "type": "function",
+      "snippet": "escape(${1:xmlText})",
+      "leftLabel": "string",
+      "description": "Member Of: N/xml, Prepares a String for use in XML by escaping XML markup (for example, angle brackets, quotation marks, and ampersands).",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "validate(${1:xml},${2:xsdFilePathOrId},${3:importFolderPathOrId})",
+      "leftLabel": "void",
+      "description": "Member Of: N/xml, Validates a supplied XML document against a supplied XML Schema (XSD Document).",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "fromString(${1:text})",
+      "leftLabel": "Document",
+      "description": "Member Of: N/xml, XML Parser Object",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "toString(${1:document})",
+      "leftLabel": "string",
+      "description": "Member Of: N/xml, Generate a String from an XML Document object.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "select(${1:xpath},${2:node})",
+      "leftLabel": "Node[]",
+      "description": "Member Of: N/xml, XPath Query Object",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "appendChild(${1:newChild})",
+      "leftLabel": "Node",
+      "description": "Member Of: N/xml, Return a new instance of XML Node.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "cloneNode(${1:deep})",
+      "leftLabel": "Node",
+      "description": "Member Of: N/xml, Returns a duplicate of this node, i.e., serves as a generic copy constructor for nodes. The duplicate node has no parent.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "compareDocumentPosition(${1:other})",
+      "leftLabel": "int",
+      "description": "Member Of: N/xml, Compares the reference node, i.e. the node on which this method is being called, with a node, i.e. the one passed as a parameter,",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "insertBefore(${1:newChild},${2:refChild})",
+      "leftLabel": "Node",
+      "description": "Member Of: N/xml, Returns whether this node (if it is an Element) has any attributes.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "isDefaultNamespace(${1:namespaceURI})",
+      "leftLabel": "boolean",
+      "description": "Member Of: N/xml, This method checks if the specified namespaceURI is the default namespace or not.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "isEqualNode(${1:other})",
+      "leftLabel": "boolean",
+      "description": "Member Of: N/xml, Tests whether two nodes are equal.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "isSameNode(${1:other})",
+      "leftLabel": "boolean",
+      "description": "Member Of: N/xml, Returns whether this node is the same node as the given one.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "lookupNamespaceURI(${1:prefix})",
+      "leftLabel": "string",
+      "description": "Member Of: N/xml, Look up the namespace URI associated to the given prefix, starting from this node.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "lookupPrefix(${1:namespaceURI})",
+      "leftLabel": "string",
+      "description": "Member Of: N/xml, Look up the prefix associated to the given namespace URI, starting from this node. The default namespace declarations are ignored by this method.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "removeChild(${1:oldChild})",
+      "leftLabel": "Node",
+      "description": "Member Of: N/xml, Puts all Text nodes in the full depth of the sub-tree underneath this Node, including attribute nodes, into a \"normal\" form",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "replaceChild(${1:newChild},${2:oldChild})",
+      "leftLabel": "Node",
+      "description": "Member Of: N/xml, Replaces the child node oldChild with newChild in the list of children, and returns the oldChild node.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "adoptNode(${1:source})",
+      "leftLabel": "Node",
+      "description": "Member Of: N/xml, A map of key/value (string->Attr) pairs containing the attributes of this node (if it is an Element) or null otherwise.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "createAttribute(${1:name},${2:value})",
+      "leftLabel": "Attr",
+      "description": "Member Of: N/xml, Creates an attribute node of the given name.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "createAttributeNS(${1:namespaceURI},${2:qualifiedName},${3:value})",
+      "leftLabel": "Attr",
+      "description": "Member Of: N/xml, Creates an attribute of the given qualified name and namespace URI.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "createCDATASection(${1:data})",
+      "leftLabel": "Node",
+      "description": "Member Of: N/xml, Creates a CDATASection node whose value is the specified string.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "createComment(${1:data})",
+      "leftLabel": "Node",
+      "description": "Member Of: N/xml, Creates a Comment node given the specified string.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "createElement(${1:tagName})",
+      "leftLabel": "Element",
+      "description": "Member Of: N/xml, Creates an empty DocumentFragment object.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "createElementNS(${1:namespaceURI},${2:qualifiedName})",
+      "leftLabel": "Element",
+      "description": "Member Of: N/xml, Creates an element of the given qualified name and namespace URI.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "createProcessingInstruction(${1:target},${2:data})",
+      "leftLabel": "Node",
+      "description": "Member Of: N/xml, Creates a ProcessingInstruction node given the specified name and data strings.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "createTextNode(${1:data})",
+      "leftLabel": "Node",
+      "description": "Member Of: N/xml, Creates a Text node given the specified string.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "getElementById(${1:elementId})",
+      "leftLabel": "Element",
+      "description": "Member Of: N/xml, Returns the Element that has an ID attribute with the given value. If no such element exists, this returns null.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "getElementsByTagName(${1:tagName})",
+      "leftLabel": "Element[]",
+      "description": "Member Of: N/xml, Returns an array of all the Elements with a given tag name in document order.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "getElementsByTagNameNS(${1:namespaceURI},${2:localName})",
+      "leftLabel": "Element[]",
+      "description": "Member Of: N/xml, Returns an array of all the Elements with a given local name and namespace URI in document order.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "importNode(${1:importedNode},${2:deep})",
+      "leftLabel": "Node",
+      "description": "Member Of: N/xml, Imports a node from another document to this document, without altering or removing the source node from the original document;",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "getAttribute(${1:name})",
+      "leftLabel": "string",
+      "description": "Member Of: N/xml, The Document Type Declaration associated with this document.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "getAttributeNode(${1:name})",
+      "leftLabel": "Attr",
+      "description": "Member Of: N/xml, Retrieves an attribute node by name.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "getAttributeNodeNS(${1:namespaceURI},${2:localName})",
+      "leftLabel": "Attr",
+      "description": "Member Of: N/xml, Retrieves an attribute node by local name and namespace URI.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "getAttributeNS(${1:namespaceURI},${2:localName})",
+      "leftLabel": "string",
+      "description": "Member Of: N/xml, Retrieves an attribute value by local name and namespace URI.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "getElementsByTagName(${1:tagName})",
+      "leftLabel": "Element[]",
+      "description": "Member Of: N/xml, Returns an array of all descendant Elements with a given tag name, in document order.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "getElementsByTagNameNS(${1:namespaceURI},${2:localName})",
+      "leftLabel": "Element[]",
+      "description": "Member Of: N/xml, Returns an array of all descendant Elements with a given local name and namespace URI in document order.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "hasAttribute(${1:name})",
+      "leftLabel": "boolean",
+      "description": "Member Of: N/xml, Returns true when an attribute with a given name is specified on this element or has a default value, false otherwise.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "hasAttributeNS(${1:namespaceURI},${2:localName})",
+      "leftLabel": "boolean",
+      "description": "Member Of: N/xml, Returns true when an attribute with a given local name and namespace URI is specified on this element or has a default value, false otherwise.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "removeAttribute(${1:name})",
+      "leftLabel": "void",
+      "description": "Member Of: N/xml, Removes an attribute by name.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "removeAttributeNode(${1:oldAttr})",
+      "leftLabel": "Attr",
+      "description": "Member Of: N/xml, Removes the specified attribute node.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "removeAttributeNS(${1:namespaceURI},${2:localName})",
+      "leftLabel": "void",
+      "description": "Member Of: N/xml, Removes an attribute by local name and namespace URI.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "setAttribute(${1:name},${2:value})",
+      "leftLabel": "void",
+      "description": "Member Of: N/xml, Adds a new attribute. If an attribute with that name is already present in the element, its value is changed to be that of the value parameter.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "setAttributeNode(${1:newAttr})",
+      "leftLabel": "Attr",
+      "description": "Member Of: N/xml, Adds a new attribute node. If an attribute with that name is already present in the element, it is replaced by the new one.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "setAttributeNodeNS(${1:newAttr})",
+      "leftLabel": "Attr",
+      "description": "Member Of: N/xml, Adds a new attribute node. If an attribute with that local name and that namespace URI is already present in the element, it is replaced by the new one.",
+      "memberOf": "N/xml"
+    },
+    {
+      "type": "function",
+      "snippet": "setAttributeNS(${1:namespaceURI},${2:qualifiedName},${3:value})",
+      "leftLabel": "void",
+      "description": "Member Of: N/xml, Adds a new attribute. If an attribute with the same local name and namespace URI is already present on the element, its prefix is changed",
+      "memberOf": "N/xml"
+    }
+  ]
+}
