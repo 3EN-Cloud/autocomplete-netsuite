@@ -1,5 +1,7 @@
 {
-  "functions": [{
+  "functions": [
+  
+    {
     "type": "function",
     "snippet": "nlapiAddDays(${1:d},${2:days})",
     "leftLabel": "Date",
