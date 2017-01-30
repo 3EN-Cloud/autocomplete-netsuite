@@ -3,7 +3,7 @@
   "main": "./lib/main",
   "version": "1.0.0",
   "description": "An autocomplete package for the netsuite suitescript api",
-  "repository": "https://github.com/ProductEarthSolutions/autocomplete-netsuite",
+  "repository": "https://github.com/3EN-Cloud/autocomplete-netsuite",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
