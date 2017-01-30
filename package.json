@@ -1,7 +1,7 @@
 {
   "name": "autocomplete-netsuite",
   "main": "./lib/main",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "An autocomplete package for the netsuite suitescript api",
   "repository": "https://github.com/3EN-Cloud/autocomplete-netsuite",
   "license": "MIT",
