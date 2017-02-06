@@ -18,7 +18,7 @@ Or to install via command use:
 **SuiteScript v1.0 supported:**
 
 * Support for all nlapi* functions.
-* Support for all nlobj* member functions.
+* Support for all nlobj* constructors and member functions.
 
 **SuiteScript v2.0 supported:**
 
