@@ -1,7 +1,22 @@
 {
-  "functions": [
-  
-    {
+  "objects": [{
+      "type": "class",
+      "snippet": "nlobjCredentialBuilder(${1:string},${2:domainString})",
+      "leftLabel": "nlobjCredentialBuilder",
+      "description": "The nlobjCredentialBuilder object encapsulates a request string that can be passed to nlapiRequestURLWithCredentials(credentials, url, postdata, headers, httpsMethod)."
+    } , {
+        "type": "class",
+        "snippet": "nlobjSearchColumn(${1:name}, ${2:join}, ${3:summary})",
+        "leftLabel": "nlobjSearchColumn",
+        "description": "Primary object used to encapsulate search return columns."
+    } , {
+        "type": "class",
+        "snippet": "nlobjSearchFilter(${1:name}, ${1:join}, ${1:operator}, ${1:value1}, ${1:value2})",
+        "leftLabel": "nlobjSearchFilter",
+        "description": "Primary object used to encapsulate search filters."
+    }
+  ],
+  "functions": [{
     "type": "function",
     "snippet": "nlapiAddDays(${1:d},${2:days})",
     "leftLabel": "Date",
