@@ -4,6 +4,8 @@ ________________
 
 An autocomplete package for atom that autocompletes functions from the NetSuite SuiteScript api.
 
+________________
+
 ![demo](http://mwil.so/img/functionDemo.gif)
 
 ## Installation
