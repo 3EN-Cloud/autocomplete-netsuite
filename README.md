@@ -1,4 +1,4 @@
-# autocomplete-netsuite
+![logo](https://raw.githubusercontent.com/3EN-Cloud/autocomplete-netsuite/master/screenshots/logo.png)
 
 An autocomplete package for atom, that autocompletes functions from the NetSuite SuiteScript api.
 
