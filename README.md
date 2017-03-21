@@ -18,12 +18,14 @@ Or to install via command use:
 **SuiteScript v1.0 supported:**
 
 * Support for all nlapi* functions.
-* Support for all nlobj* member functions.
+* Support for all nlobj* constructors and member functions.
 
 **SuiteScript v2.0 supported:**
 
 * Support for all member functions.
-* Global objects not supported yet.
+* Support for log and util global objects.
+* Support for define and require global functions.
+* Support for all `record.Type` enum values. e.g. `record.Type.EMPLOYEE`
 
 **NetSuite File Header comment snippet:**
 
