@@ -97,6 +97,145 @@
     "leftLabel": "void",
     "memberOf": "log"
   }],
+  "userEventTypeEnum": [{
+    "type": "constant",
+    "snippet": "APPROVE",
+    "leftLabel": "",
+    "description": "APPROVE event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "CANCEL",
+    "leftLabel": "",
+    "description": "CANCEL event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "CHANGEPASSWORD",
+    "leftLabel": "",
+    "description": "CHANGEPASSWORD event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "COPY",
+    "leftLabel": "",
+    "description": "COPY event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "CREATE",
+    "leftLabel": "",
+    "description": "CREATE event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "DELETE",
+    "leftLabel": "",
+    "description": "DELETE event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "DROPSHIP",
+    "leftLabel": "",
+    "description": "DROPSHIP event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "EDIT",
+    "leftLabel": "",
+    "description": "EDIT event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "EDITFORECAST",
+    "leftLabel": "",
+    "description": "EDITFORECAST event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "EMAIL",
+    "leftLabel": "",
+    "description": "EMAIL event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "MARKCOMPLETE",
+    "leftLabel": "",
+    "description": "MARKCOMPLETE event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "ORDERITEMS",
+    "leftLabel": "",
+    "description": "ORDERITEMS event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "PACK",
+    "leftLabel": "",
+    "description": "PACK event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "PAYBILLS",
+    "leftLabel": "",
+    "description": "PAYBILLS event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "PRINT",
+    "leftLabel": "",
+    "description": "PRINT event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "QUICKVIEW",
+    "leftLabel": "",
+    "description": "QUICKVIEW event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "RESASSIGN",
+    "leftLabel": "",
+    "description": "RESASSIGN event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "REJECT",
+    "leftLabel": "",
+    "description": "REJECT event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "SHIP",
+    "leftLabel": "",
+    "description": "SHIP event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "SPECIALORDER",
+    "leftLabel": "",
+    "description": "SPECIALORDER event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "TRANSFORM",
+    "leftLabel": "",
+    "description": "TRANSFORM event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "VIEW",
+    "leftLabel": "",
+    "description": "VIEW event type",
+    "memberOf": ""
+  }, {
+    "type": "constant",
+    "snippet": "XEDIT",
+    "leftLabel": "",
+    "description": "XEDIT event type",
+    "memberOf": ""
+  }],
   "recordTypeEnums": [{
     "type": "constant",
     "snippet": "ACCOUNT",
