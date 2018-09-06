@@ -5112,7 +5112,7 @@
   }, {
     "type": "function",
     "description": "Member Of: N/search Performs a search for one or more body fields on a record. This function supports joined-field lookups.\nNote that the notation for joined fields is: join_id.field_name",
-    "snippet": "lookupFieldsSearch({type:${1:type},id:${2:id},columns:${3:columns}})",
+    "snippet": "lookupFields({type:${1:type},id:${2:id},columns:${3:columns}})",
     "leftLabel": "Some object",
     "memberOf": "N/search"
   }, {
